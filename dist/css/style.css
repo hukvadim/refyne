@@ -1,0 +1,127 @@
+@charset "UTF-8";
+:root {
+  --base-fz: $default-font-size;
+  --base-tc: $default-text-color;
+  --base-pl: $default-placeholder-color; }
+
+*, ::before, ::after {
+  box-sizing: border-box; }
+
+svg {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem; }
+
+a,
+button,
+.pointer,
+.btn {
+  cursor: pointer;
+  text-decoration: none; }
+
+a,
+a:focus,
+a:focus-within,
+a:active,
+a:hover,
+button,
+button:focus,
+button:focus-within,
+.btn,
+.btn:hover,
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  border: none; }
+
+a {
+  color: #009cff; }
+  a:active {
+    color: #009cff; }
+  a:hover {
+    color: #0097f5; }
+
+.d-flex {
+  display: flex; }
+
+.d-justify {
+  justify-content: center; }
+
+.animate::before,
+.animate::after,
+.animate {
+  transition: all .25s liner; }
+
+.text-limit span,
+.text-limit {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%; }
+
+.form-control::-webkit-input-placeholder,
+.form-control::-moz-placeholder,
+.form-control:-ms-input-placeholder,
+.form-control::placeholder {
+  color: #929292; }
+
+.after,
+.before {
+  position: relative; }
+
+.after::after,
+.before::before {
+  content: '';
+  position: absolute; }
+
+.fw-300 {
+  font-weight: 300; }
+
+.fw-400 {
+  font-weight: 400; }
+
+.fw-500 {
+  font-weight: 500; }
+
+.fw-600 {
+  font-weight: 600; }
+
+.fw-700 {
+  font-weight: 700; }
+
+.fw-800 {
+  font-weight: 800; }
+
+/**
+ * Посторінкова навігація
+ */
+/**
+ * Позначка обов'язкового поля
+ */
+.required-label::before {
+  content: '*';
+  position: absolute;
+  top: -0.125rem;
+  right: -0.75rem;
+  display: block; }
+
+.required-label--red::before {
+  color: #ff4c4c; }
+
+/**
+ * Загальні стилі форм
+ */
+.form-style-default {
+  position: relative; }
+
+.typography {
+  color: #333;
+  overflow: auto; }
+  .typography,
+  .typography p {
+    line-height: 1.6;
+    font-size: 16px; }
+  .typography p {
+    padding: 0.625rem 0 0.75rem 0;
+    margin: 0; }
