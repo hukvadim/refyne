@@ -3,13 +3,21 @@
 	--base-tc : $default-text-color
 	--base-pl : $default-placeholder-color
 
+	--pr: #EE665F
+
 *, ::before, ::after 
 	box-sizing: border-box
 
+body
+	font-family: 'Averta Demo PE'
+
+
 svg
+	--w: 24px
+	--h: 24px
 	position: relative
-	width: 1.5rem
-	height: 1.5rem
+	width: var(--w)
+	height: var(--h)
 
 a,
 button,
@@ -47,6 +55,9 @@ a
 .d-justify
 	justify-content: center 
 
+.d-justify-between
+	justify-content: space-between 
+
 .animate::before,
 .animate::after,
 .animate
@@ -80,3 +91,8 @@ $fwList: 300 400 500 600 700 800
 @each $fontWeight in $fwList
 	.fw-#{$fontWeight}
 		font-weight: $fontWeight
+
+
+.logo
+	--w: 144px
+	--h: 24px
