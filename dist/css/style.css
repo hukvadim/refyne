@@ -193,7 +193,7 @@ svg {
 
 a,
 button,
-.pointer,
+.cur-p,
 .btn {
   cursor: pointer;
   text-decoration: none; }
@@ -321,7 +321,7 @@ a {
     font-size: var(--fz);
     color: #212121;
     display: inline-block;
-    padding-left: 100%;
+    padding-left: 100vw;
     -webkit-animation: runningText var(--time) infinite linear;
     animation: runningText var(--time) infinite linear;
     white-space: nowrap;
@@ -331,19 +331,19 @@ a {
       .running-line .running-line__box--transparent .text-line {
         position: absolute;
         top: 0;
-        left: 0; }
+        left: 100vw; }
 
 @-webkit-keyframes runningText {
   0% {
     transform: translate(0, 0); }
   100% {
-    transform: translate(-160%, 0); } }
+    transform: translate(-100%, 0); } }
 
 @keyframes runningText {
   0% {
     transform: translate(0, 0); }
   100% {
-    transform: translate(-160%, 0); } }
+    transform: translate(-100%, 0); } }
 
 .text-line {
   --w: 100%;
@@ -424,7 +424,8 @@ a {
       color: var(--wh);
       border-radius: 50%; }
       .btn-icon--fill .icon {
-        --s: 12px; }
+        --s: 12px;
+        top: 0; }
 
 /**
  * Позначка обов'язкового поля *
@@ -466,19 +467,25 @@ a {
   top: 70px;
   right: 80px;
   font-size: 0;
-  color: transparent; }
+  color: transparent;
+  cursor: pointer; }
   .call-nav::before, .call-nav::after {
     content: '';
     position: absolute;
     height: 0.125rem;
     width: 1.125rem;
     background-color: var(--wh);
-    right: 0.75rem; }
+    right: 0.75rem;
+    transition: .25s; }
   .call-nav::before {
     top: 1rem; }
   .call-nav::after {
     top: 1.4375rem;
     width: 0.9375rem; }
+  .call-nav:hover::before {
+    width: 0.9375rem; }
+  .call-nav:hover::after {
+    width: 1.125rem; }
 
 .nav {
   position: absolute;
@@ -489,6 +496,7 @@ a {
   .nav .nav__menu {
     font-size: 16px;
     text-transform: uppercase;
-    margin-right: 3.125rem; }
+    margin-right: 3.125rem;
+    cursor: pointer; }
   .nav-padding {
     padding-top: 11.25rem; }

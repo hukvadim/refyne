@@ -9,6 +9,7 @@
 	right: 80px
 	font-size: 0
 	color: transparent
+	cursor: pointer
 	&::before,
 	&::after
 		content: ''
@@ -17,11 +18,17 @@
 		width: 1.125rem
 		background-color: var(--wh)
 		right: 0.75rem
+		transition: .25s
 	&::before
 		top: 1rem
 	&::after
 		top: 1.4375rem
 		width: 0.9375rem
+	&:hover
+		&::before
+			width: 0.9375rem
+		&::after
+			width: 1.125rem
 
 
 $bem: '.nav'
@@ -35,5 +42,6 @@ $bem: '.nav'
 		font-size: 16px
 		text-transform: uppercase
 		margin-right: 3.125rem
+		cursor: pointer
 	&-padding
 		padding-top: 11.25rem
