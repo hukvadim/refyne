@@ -1,2 +1,33 @@
 .btn
-	
+	--h: 2.5rem
+	--fz: 1.0625rem
+	color: var(--pr)
+	font-size: var(--fz)
+	min-height: var(--h)
+	font-weight: 600
+	line-height: 1
+	text-transform: uppercase
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	letter-spacing: 0.053125rem
+	margin-left: 0.625rem
+	&-icon
+		width: 2.5rem
+		height: 2.5rem
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-left: 0.625rem
+		.icon
+			--s: 0.875rem
+			width: var(--s)
+			height: var(--s)
+			position: relative
+			top: 0.0625rem
+		&--fill
+			background-color: var(--pr)
+			color: var(--wh)
+			border-radius: 50%
+			.icon
+				--s: 12px

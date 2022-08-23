@@ -1,5 +1,5 @@
 .container
-	--w: 1350px
+	--w: 1330px
 	--p: 30px
 	max-width: var(--w)
 	padding-left: var(--p)
@@ -9,3 +9,82 @@
 	&-fluid
 		--w: 100%
 		--p: 80px
+
+
+.running-line
+	--mt: -86px
+	margin-top: var(--mt)
+	z-index: 9
+	position: relative
+	width: 100%
+	white-space: nowrap
+	overflow: hidden
+	& &__box
+		--fz: 140px
+		--time: 20s
+		font-size: var(--fz)
+		color: #212121
+		display: inline-block
+		padding-left: 100%
+		animation: runningText var(--time) infinite linear
+		white-space: nowrap
+		position: relative
+		&--transparent
+			color: transparent
+			.text-line
+				position: absolute
+				top: 0
+				left: 0
+
+@keyframes runningText
+	0%
+		transform: translate(0, 0)
+	100%
+		transform: translate(-160%, 0)
+
+
+.text-line
+	--w: 100%
+	--h: 100%
+	width: var(--w)
+	height: var(--h)
+	text
+		--fz: 8.75rem
+		font-size: var(--fz)
+
+
+@keyframes dash
+	to
+		stroke-dashoffset: 0
+
+
+@keyframes filling
+	from
+		fill: #2A4A73
+		fill-opacity: 0
+
+	to
+		fill: #2A4A73
+		fill-opacity: 1
+
+
+
+
+
+
+.header
+	background-color: var(--gray-light)
+	min-height: 67.5rem
+
+
+
+.header-slide
+	padding-top: 9.125rem
+	&__meta
+		margin: 0
+	&__title
+		font-size: 6.5625rem
+		margin: 0
+		line-height: 1.25
+		margin-bottom: 2.625rem
+	&__btn

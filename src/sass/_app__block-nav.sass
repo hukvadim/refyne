@@ -11,10 +11,17 @@
 	color: transparent
 	&::before,
 	&::after
-
+		content: ''
+		position: absolute
+		height: 0.125rem
+		width: 1.125rem
+		background-color: var(--wh)
+		right: 0.75rem
 	&::before
-
+		top: 1rem
 	&::after
+		top: 1.4375rem
+		width: 0.9375rem
 
 
 $bem: '.nav'
