@@ -35,6 +35,7 @@
 				position: absolute
 				top: 0
 				left: 100vw
+				letter-spacing: 0.2375rem
 
 @keyframes runningText
 	0%
@@ -46,11 +47,29 @@
 .text-line
 	--w: 100%
 	--h: 100%
+	--color: #000000
+	--border: 2px
+	--fw: 700
+	--fz: 8.75rem
 	width: var(--w)
 	height: var(--h)
-	text
-		--fz: 8.75rem
-		font-size: var(--fz)
+	stroke: var(--color) 
+	stroke-width: var(--border)
+	font-weight: var(--fw)
+	font-size: var(--fz)
+	display: flex
+	&-with-ghost
+		position: relative
+		color: transparent
+		--fz-ghost: 30px
+		font-size: var(--fz-ghost)
+		.text-line
+			--t: 0
+			--l: 0
+			position: absolute
+			top: var(--t)
+			left: var(--l)
+			font-size: var(--fz-ghost)
 
 
 @keyframes dash
@@ -87,4 +106,48 @@
 		margin: 0
 		line-height: 1.25
 		margin-bottom: 2.625rem
+		font-weight: 400
+		letter-spacing: 0.09375rem
 	&__btn
+
+
+
+
+.block-title
+	font-size: 5.75rem
+	font-weight: 700
+	display: flex
+	flex-direction: column
+	flex-wrap: wrap
+	justify-content: flex-start
+	align-items: flex-start
+	& &__icon
+		line-height: 1
+		.text-line
+			--border: 0.0625rem
+			--color: var(--pr)
+			--fz: 2.25rem
+	& &__text
+		margin-left: -0.25rem
+		letter-spacing: -0.0625rem
+		&-line
+			--fz-ghost: 5.75rem
+			margin-top: -0.125rem
+			margin-left: -0.3125rem
+			letter-spacing: -0.0625rem
+			.text-line
+				--border: 1px
+
+
+
+
+
+
+.partners
+	padding: 13.25rem 0 0
+	& &__box
+		justify-content: space-between
+	& &__text
+	& &__btn-holder
+		align-self: flex-end
+		margin-bottom: 2.25rem

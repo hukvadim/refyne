@@ -2,6 +2,7 @@
 	--base-fz : 16px
 	--base-tc : #756B6B
 	--base-pl : #756B6B
+	--base-bg : #F4F2F2
 
 	--pr:   #EE665F
 	--pr-h: #EE6042
@@ -14,11 +15,12 @@
 	box-sizing: border-box
 
 body
-	font-family: 'Averta Demo PE'
+	font-family: 'Averta'
 	font-size: var(--base-fz)
 	line-height: 1.52
 	color: var(--bl)
 	font-weight: 400
+	background-color: var(--base-bg)
 
 .logo
 	position: relative
@@ -114,7 +116,10 @@ a
 	position: absolute
 
 
-$fwList: 300 400 500 600 700 800
+.italic
+	font-style: italic
+
+$fwList: 300 400 500 600 700
 @each $fontWeight in $fwList
 	.fw-#{$fontWeight}
 		font-weight: $fontWeight
