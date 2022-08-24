@@ -50,6 +50,7 @@ button,
 .btn,
 	cursor: pointer
 	text-decoration: none
+	transition: .25s
 
 
 a,
@@ -132,7 +133,31 @@ $fzList: 14px 16px 18px
 .mb-20
 	margin-bottom: 20px
 
+.block-divider
+	--p: 0
+	--m: 0
+	margin: var(--m)
+	padding: var(--p)
+
 
 .text-mutted
 	font-size: 1rem
 	color: var(--gray)
+
+
+.grid
+	--jc: space-between
+	--ai: flex-start
+	--intval: 20px
+	--fxw: nowrap
+	--card-min: auto
+	--card-max: auto
+	display: flex
+	justify-content: var(--jc)
+	align-items: var(--ai)
+	margin: 0 calc(var(--intval) * -1)
+	flex-wrap: var(--fxw)
+	.grid-item
+		padding: 0 var(--intval)
+		min-width: var(--card-min)
+		max-width: var(--card-max)

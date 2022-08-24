@@ -1,2 +1,37 @@
-.product-card
-	
+$bem: '.blog-card'
+.blog-card 
+	&:hover
+		#{$bem}__img
+			transform: rotate(5deg) 
+	&__img-hold
+	&__img
+		transition: transform 0.5s
+	&__text-hold
+	&__title
+		color: var(--bl)
+	&__category
+		position: relative
+		display: flex
+		flex-direction: row
+		align-items: center
+		padding-left: 20px
+		color: #C2B5B5
+		&::before
+			content: ''
+			position: absolute
+			top: 7px
+			left: 0
+			width: 10px
+			height: 10px
+			background-color: #EE665F
+			border-radius: 50%
+	&__title
+		font-size: 35px
+	&__tag-list
+		color: #C2B5B5
+	&--inline
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-direction: row-reverse
+		align-content: flex-start
