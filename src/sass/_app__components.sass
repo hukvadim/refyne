@@ -6,6 +6,7 @@
 	padding-right: var(--p)
 	margin-right: auto
 	margin-left: auto
+	position: relative
 	&-fluid
 		--w: 100%
 		--p: 80px
@@ -197,14 +198,54 @@
 .quotation
 	background-color: var(--gray-light)
 	min-height: 1080px
+	.container
+		padding-top: 15rem
 	& &__box
-	
+		position: relative
+		padding: 8.4375rem 0 0
+		margin-left: 10.25rem
+		.icon-quote
+			--w: 7.875rem
+			--h: 7.875rem
+			position: absolute
+			top: 0
+			left: 0
+			color: var(--pr)
+		.icon-hero-element
+			--w: 9rem
+			--h: 9rem
+			position: absolute
+			bottom: -7.1875rem
+			right: -7.8125rem
 	& &__quote
-	
+		margin: 0 0 1.5rem 10.5rem
 		&-text
-	
+			font-size: 2.5rem
+			font-weight: 600
+			margin: 0
 	& &__caption
-	
-		&-cite
-	
+		display: flex
+		flex-direction: column
+		line-height: 1.65
+		&-top
+			font-size: 1.125rem
+			font-weight: normal
+			font-weight: 700
+		&-bottom
+			font-size: 0.875rem
+			color: var(--gray)
+			font-weight: 400
+	.detail
+		&.detail-1
+			--t: -6.5rem
+			--r: -27.5rem
+			--sz: 29.8125rem
+			--rt: -2deg
+		&.detail-2
+			--b: -15.625rem
+			--l: -31.625rem
+			--sz: 35.625rem
+			--rt: 87deg
+
+
 

@@ -76,6 +76,12 @@ a
 		color: var(--pr-h)
 		text-decoration: none
 
+.ov-hidden
+	overflow: hidden
+
+.relative
+	position: relative
+
 .d-flex
 	display: flex
 
@@ -161,3 +167,22 @@ $fzList: 14px 16px 18px
 		padding: 0 var(--intval)
 		min-width: var(--card-min)
 		max-width: var(--card-max)
+
+
+.detail
+	--sz: 31.25rem
+	--c: #EE665F
+	--t : initial 
+	--b : initial 
+	--r : initial 
+	--l : initial
+	--rt: 0deg
+	position: absolute
+	width: var(--sz)
+	height: var(--sz)
+	color: var(--c)
+	top: var(--t)
+	bottom: var(--b)
+	right: var(--r)
+	left: var(--l)
+	transform: rotate(var(--rt))

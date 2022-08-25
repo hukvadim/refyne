@@ -224,6 +224,12 @@ a {
     color: var(--pr-h);
     text-decoration: none; }
 
+.ov-hidden {
+  overflow: hidden; }
+
+.relative {
+  position: relative; }
+
 .d-flex {
   display: flex; }
 
@@ -321,6 +327,24 @@ a {
     min-width: var(--card-min);
     max-width: var(--card-max); }
 
+.detail {
+  --sz: 31.25rem;
+  --c: #EE665F;
+  --t: initial;
+  --b: initial;
+  --r: initial;
+  --l: initial;
+  --rt: 0deg;
+  position: absolute;
+  width: var(--sz);
+  height: var(--sz);
+  color: var(--c);
+  top: var(--t);
+  bottom: var(--b);
+  right: var(--r);
+  left: var(--l);
+  transform: rotate(var(--rt)); }
+
 .container {
   --w: 1330px;
   --p: 30px;
@@ -328,7 +352,8 @@ a {
   padding-left: var(--p);
   padding-right: var(--p);
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  position: relative; }
   .container-fluid {
     --w: 100%;
     --p: 80px; }
@@ -508,6 +533,53 @@ a {
 .quotation {
   background-color: var(--gray-light);
   min-height: 1080px; }
+  .quotation .container {
+    padding-top: 15rem; }
+  .quotation .quotation__box {
+    position: relative;
+    padding: 8.4375rem 0 0;
+    margin-left: 10.25rem; }
+    .quotation .quotation__box .icon-quote {
+      --w: 7.875rem;
+      --h: 7.875rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: var(--pr); }
+    .quotation .quotation__box .icon-hero-element {
+      --w: 9rem;
+      --h: 9rem;
+      position: absolute;
+      bottom: -7.1875rem;
+      right: -7.8125rem; }
+  .quotation .quotation__quote {
+    margin: 0 0 1.5rem 10.5rem; }
+    .quotation .quotation__quote-text {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin: 0; }
+  .quotation .quotation__caption {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.65; }
+    .quotation .quotation__caption-top {
+      font-size: 1.125rem;
+      font-weight: normal;
+      font-weight: 700; }
+    .quotation .quotation__caption-bottom {
+      font-size: 0.875rem;
+      color: var(--gray);
+      font-weight: 400; }
+  .quotation .detail.detail-1 {
+    --t: -6.5rem;
+    --r: -27.5rem;
+    --sz: 29.8125rem;
+    --rt: -2deg; }
+  .quotation .detail.detail-2 {
+    --b: -15.625rem;
+    --l: -31.625rem;
+    --sz: 35.625rem;
+    --rt: 87deg; }
 
 .btn {
   --h: 2.5rem;
