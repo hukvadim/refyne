@@ -8,6 +8,7 @@
 	--pr-h: #EE6042
 	--gray: #756B6B
 	--gray-light: #EDEAEA
+	--gray-light2: #C2B5B5
 	--wh: #fff
 	--bl: #000
 
@@ -22,6 +23,7 @@ body
 	font-weight: 400
 	background-color: var(--base-bg)
 
+$bem: '.logo'
 .logo
 	position: relative
 	cursor: pointer
@@ -35,7 +37,9 @@ body
 		top: 0
 		left: 4.5rem
 		position: absolute
-
+	&--wh
+		#{$bem}__part
+			color: var(--wh)
 
 svg
 	--w: 1.5rem
@@ -107,11 +111,27 @@ a
 	display: inline-block
 	max-width: 100%
 
-.form-control::-webkit-input-placeholder,
-.form-control::-moz-placeholder,
-.form-control:-ms-input-placeholder,
-.form-control::placeholder
-	color: $default-placeholder-color
+.form-input::-webkit-input-placeholder
+	color: #{$default-placeholder-color}
+.form-input::-moz-placeholder
+	color: #{$default-placeholder-color}
+.form-input:-ms-input-placeholder
+	color: #{$default-placeholder-color}
+.form-input:-moz-placeholder
+	color: #{$default-placeholder-color}
+.form-input::placeholder
+	color: #{$default-placeholder-color}
+
+.form-input.form-input--wh::-webkit-input-placeholder
+	color: #{$default-placeholder-color-wh}
+.form-input.form-input--wh::-moz-placeholder
+	color: #{$default-placeholder-color-wh}
+.form-input.form-input--wh:-ms-input-placeholder
+	color: #{$default-placeholder-color-wh}
+.form-input.form-input--wh:-moz-placeholder
+	color: #{$default-placeholder-color-wh}
+.form-input.form-input--wh::placeholder
+	color: #{$default-placeholder-color-wh}
 
 .after,
 .before
@@ -151,11 +171,45 @@ $fzList: 14px 16px 18px
 	color: var(--gray)
 
 
+.list
+	--p: 0
+	--m: 0
+	--li-p: 0
+	--li-m: 0
+	--link-p: 0
+	--link-m: 0
+	--link-sz: 1.625rem
+	--link-c: var(--pr)
+	--link-h-c: var(--pr)
+	&-unstyled
+		margin: 0
+		padding: 0
+		list-style: none
+	& &-li
+		margin: var(--li-p)
+		padding: var(--li-m)
+	& &-link
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		height: var(--link-sz)
+		padding: var(--link-p)
+		margin: var(--link-m)
+		color: var(--link-c)
+		&:hover
+			color: var(--link-h-c)
+
+// .list-nav
+// 	--p: 0
+// 	--m: 0
+
+
 .grid
 	--jc: space-between
 	--ai: flex-start
-	--intval: 20px
+	--intval: 1.25rem
 	--fxw: nowrap
+	--card-width: 100%
 	--card-min: auto
 	--card-max: auto
 	display: flex
@@ -164,6 +218,7 @@ $fzList: 14px 16px 18px
 	margin: 0 calc(var(--intval) * -1)
 	flex-wrap: var(--fxw)
 	.grid-item
+		width: var(--card-width)
 		padding: 0 var(--intval)
 		min-width: var(--card-min)
 		max-width: var(--card-max)
@@ -186,3 +241,14 @@ $fzList: 14px 16px 18px
 	right: var(--r)
 	left: var(--l)
 	transform: rotate(var(--rt))
+
+
+.rotate
+	--s: 14s
+	animation: rotation var(--s) infinite linear
+
+@keyframes rotation
+	from
+		transform: rotate(0deg)
+	to
+		transform: rotate(360deg)

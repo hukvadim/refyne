@@ -39,6 +39,7 @@
 		<meta name="theme-color" content="#ffffff">
 
 		<link rel="stylesheet" href="fonts/Averta/stylesheet.css">
+		<link rel="stylesheet" href="libs/slick/slick.css">
 		<link rel="stylesheet" href="css/style.min.css">
 	</head>
 
@@ -149,9 +150,9 @@
 		<a href="index.html" class="nav__logo logo">
 			<svg class="icon icon-logo logo__part"><use xlink:href="#icon-logo"></use></svg>
 			<svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__detail">
-				<path d="M8.07256 15.7752L0.462158 0.710449H5.96681L10.7952 10.4814L8.07256 15.7752Z" fill="url(#logo_detail_gradient2)" />
+				<path d="M8.07256 15.7752L0.462158 0.710449H5.96681L10.7952 10.4814L8.07256 15.7752Z" fill="url(#logo_detail_gradient)" />
 				<defs>
-					<linearGradient id="logo_detail_gradient2" gradientTransform="rotate(30)"> 
+					<linearGradient id="logo_detail_gradient" gradientTransform="rotate(30)"> 
 						<stop offset="5%" stop-color="black"/> 
 						<stop offset="100%" stop-color="black" stop-opacity=".2"/> 
 					</linearGradient> 
@@ -171,14 +172,87 @@
 
 
 
-<footer class="footer d-flex align-items-center fw-500">
-	<div class="container d-flex align-items-center flex-wrap">
-		<p class="footer-copyright">&copy; Copyright © 2022</p>
+<footer class="footer ov-hidden">
+	<div class="container">
+
+		<div class="footer__top grid" style="--card-width: 50%">
+			<div class="footer__top-title grid-item">
+				<h2 class="block-title footer__title">
+					<span class="block-title__text footer__title-part-1">Have a project in mind?</span>
+					<span class="block-title__text-line text-line-with-ghost footer__title-part-2">
+						<span class="text-ghost">Let's make it happen</span>
+						<svg class="text-line">
+							<text x="0" y="52" fill="none">Let's make it happen</text>
+						</svg>
+					</span>
+				</h2>
+			</div>
+			<div class="footer__top-form grid-item">
+				<form class="form-style form-style--wh form-style--abs">
+					<input type="email" name="email" class="form-input form-input--wh" placeholder="Enter your email">
+					<button class="form-btn btn btn-transparent">Send</button>
+				</form>
+			</div>
+		</div>
+
+
+
+		<div class="footer__links block-divider grid" style="--p: 15.125rem 0 5rem; --card-width: 50%">
+			<div class="footer__links-part grid-item">
+				<a href="#" class="footer__link">hello@refyne.dk</a>
+				<div class="footer__contacts block-divider grid" style="--p: 3.875rem 0 0;">
+					<div class="footer__contacts-part grid-item">
+						<p class="footer__contacts-label">København:</p>
+						<p class="footer__contacts-value">Kigkurren 8D, 3. Tv.<br>2300 København S</p>
+						<a href="#" class="footer__contacts-map">GOOGLE MAPS</a>
+					</div>
+					<div class="footer__contacts-part grid-item">
+						<p class="footer__contacts-label">Aarhus:</p>
+						<p class="footer__contacts-value">Åboulevarden 69B<br>8000 Aarhus</p>
+						<a href="#" class="footer__contacts-map">GOOGLE MAPS</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer__links-part grid-item">
+				<div class="footer__social d-flex">
+					<div class="footer__social-item"><a href="#" class="footer__link">LinkedIn</a></div>
+					<div class="footer__social-item"><a href="#" class="footer__link">Behance</a></div>
+					<div class="footer__social-item"><a href="#" class="footer__link">Instagram</a></div>
+					<div class="footer__social-item"><a href="#" class="footer__link">Twitter</a></div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="footer__bottom d-flex">
+			<p class="footer__copyright">&copy; 2022 Refyne</p>
+			<a href="index.html" class="footer__logo logo logo--wh">
+				<svg class="icon icon-logo logo__part"><use xlink:href="#icon-logo"></use></svg>
+				<svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__detail">
+					<path d="M8.07256 15.7752L0.462158 0.710449H5.96681L10.7952 10.4814L8.07256 15.7752Z" fill="url(#logo_detail_gradient-wh)" />
+					<defs>
+						<linearGradient id="logo_detail_gradient-wh" gradientTransform="rotate(30)"> 
+							<stop offset="5%" stop-color="white"/> 
+							<stop offset="100%" stop-color="white" stop-opacity=".2"/> 
+						</linearGradient> 
+					</defs>
+				</svg>
+			</a>
+			<ul class="list list-unstyled d-flex">
+				<li class="list-li"><a href="#" class="list-link">Legals</a></li>
+				<li class="list-li"><a href="#" class="list-link">Privacy Policy</a></li>
+			</ul>
+		</div>
+
+		<svg class="detail detail-1 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg>
+		<svg class="detail detail-2 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg>
 	</div> <!-- .container  -->
 </footer> <!-- .footer  -->
 
 
 	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+	<script src="libs/slick/slick.min.js"></script>
 	<script src="js/scripts.min.js?v=2"></script>
 </body>
 </html>

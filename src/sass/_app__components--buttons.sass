@@ -1,7 +1,9 @@
 .btn
 	--h: 2.5rem
 	--fz: 1.0625rem
-	color: var(--pr)
+	--c: var(--pr)
+	--c-h: var(--pr)
+	color: var(--c)
 	font-size: var(--fz)
 	min-height: var(--h)
 	font-weight: 600
@@ -11,6 +13,8 @@
 	justify-content: flex-start
 	align-items: center
 	letter-spacing: 0.053125rem
+	&:hover
+		color: var(--c-h)
 	&-icon
 		width: 2.5rem
 		height: 2.5rem
@@ -31,3 +35,7 @@
 			.icon
 				--s: 12px
 				top: 0
+	&-transparent
+		background-color: transparent
+		border: none
+		outline: none

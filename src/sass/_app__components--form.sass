@@ -13,14 +13,60 @@
 
 
 
+
+
 /**
  * Загальні стилі форм
  */
-.form-style-default
+$bem: '.form-style'
+.form-style
+	--f-input-p: 0
+	--f-input-m: 0
+	--f-input-bd: var(--gray-light2)
+	--f-input-bd-h: var(--bl)
+	--f-input-pl-holder: #{$default-placeholder-color}
+	--f-input-c: var(--bl)
+	--f-max: 100%
+	--f-height: 3.5rem
 	position: relative
-	.btn
-		&-submit
-			
+	.form-input
+		background-color: transparent
+		border: none
+		border-bottom: 0.0625rem solid var(--f-input-bd)
+		min-height: var(--f-height)
+		padding: var(--f-input-p)
+		margin: var(--f-input-m)
+		color: var(--f-input-c)
+		transition: all .25s
+		width: 100%
+		max-width: var(--f-max)
+		&:hover,
+		&:focus,
+		&:focus-visible
+			outline: none
+			border-bottom: 0.0625rem solid var(--f-input-bd-h)
+	.form-btn
+		--c: var(--wh)
+		--c-h: var(--wh)
+		padding: 0
+		min-height: var(--f-height)
+		&:hover
+			color: var(--pr)
+	&--wh
+		--f-input-bd: #C2B5B5
+		--f-input-bd-h: var(--wh)
+		.form-input
+			&--wh
+				--f-input-c: var(--wh)
+	&--abs
+		.form-input
+			--p-right: 3.75rem
+			padding-right: var(--p-right)
+		.form-btn
+			position: absolute
+			top: 0
+			right: 0
+
 
 
 

@@ -140,6 +140,8 @@
 
 
 .block-title
+	--mt: 0.83em
+	--mb: 0.83em
 	font-size: 5.75rem
 	font-weight: 700
 	display: flex
@@ -147,6 +149,8 @@
 	flex-wrap: wrap
 	justify-content: flex-start
 	align-items: flex-start
+	margin-top: var(--mt)
+	margin-bottom: var(--mb)
 	& &__icon
 		line-height: 1
 		.text-line
@@ -248,4 +252,42 @@
 			--rt: 87deg
 
 
+
+.gallery-mega-slide
+	background-color: var(--gray-light)
+	padding: 5rem 5rem 3.75rem 5rem
+	min-height: 40.625rem
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	margin-bottom: 2.625rem
+	& &__logo
+		max-width: 14.375rem
+		max-height: 3.75rem
+		&-wrap
+	& &__img
+		width: 100%
+		max-width: 23.75rem
+		&-wrap
+			position: absolute
+			bottom: -3rem
+			right: -1.25rem
+	& &__text
+		font-size: 1.25rem
+		&-wrap
+			max-width: 33.75rem
+	& &__btn
+		margin-top: 2.5rem
+
+
+.gallery
+	& &__box
+		justify-content: space-between
+		margin-bottom: 6.75rem
+	& &__btn-holder
+		align-self: flex-end
+		margin-bottom: 6.25rem
+	& &__meta-item
+		font-size: 1rem
+		color: var(--gray-light2)
 

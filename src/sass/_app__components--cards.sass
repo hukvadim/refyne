@@ -1,37 +1,76 @@
 $bem: '.blog-card'
-.blog-card 
+.blog-card
 	&:hover
 		#{$bem}__img
 			transform: rotate(5deg) 
 	&__img-hold
+		--mb: 2.125rem
+		margin-bottom: var(--mb)
+		display: block
 	&__img
 		transition: transform 0.5s
 	&__text-hold
 	&__title
-		color: var(--bl)
+		--fz: 2rem
+		--fw: 700
+		--lh: 1.52
+		--m: 0 0 0.625rem
+		--c: var(--bl)
+		color: var(--c)
+		line-height: var(--lh)
+		margin: var(--m)
+		display: inline-block
+		font-size: var(--fz)
+		font-weight: var(--fw)
 	&__category
+		--fz: 1rem
+		--dot-sz: 0.5rem
+		--dot-c: var(--pr)
+		--p: 1.5rem
+		--c: var(--bl)
+		--mb: 1.5625rem
 		position: relative
 		display: flex
 		flex-direction: row
 		align-items: center
-		padding-left: 20px
-		color: #C2B5B5
+		color: var(--c)
+		padding-left: var(--p)
+		font-size: var(--fz)
+		margin: 0 0 var(--mb)
 		&::before
 			content: ''
 			position: absolute
-			top: 7px
+			top: 50%
 			left: 0
-			width: 10px
-			height: 10px
-			background-color: #EE665F
+			transform: translate(0, -50%)
+			width: var(--dot-sz)
+			height: var(--dot-sz)
+			background-color: var(--dot-c)
 			border-radius: 50%
-	&__title
-		font-size: 35px
 	&__tag-list
-		color: #C2B5B5
+		--c: var(--gray)
+		color: var(--c)
 	&--inline
 		display: flex
 		justify-content: space-between
 		align-items: center
 		flex-direction: row-reverse
 		align-content: flex-start
+		#{$bem}__img-hold
+			margin-bottom: 0
+			padding-right: 4.375rem
+		#{$bem}__category
+			--fz: 1.25rem
+			--p: 1.5rem
+			--mb: 1.75rem
+		#{$bem}__title
+			--fz: 3rem
+			--fw: 700
+			--m: 0 0 1.125rem
+		#{$bem}__tag-list
+	&--small
+		#{$bem}__title
+		#{$bem}__img-hold
+			--mb: 1.625rem
+		#{$bem}__text-hold
+			padding-left: 1.25rem
