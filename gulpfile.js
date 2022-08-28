@@ -101,7 +101,8 @@ gulp.task('html', function () {
 			path.basename = path.basename.split('page--').join('');
 			path.extname = ".html";
 		})).on('error', error)
-		.pipe(gulp.dest(dist.pages));
+		.pipe(gulp.dest(dist.pages))
+		.pipe(browserSync.stream());
 });
 
 
@@ -196,4 +197,4 @@ gulp.task('watch', function() {
 
 // За замовчуванням: відслідковуємо
 // gulp.task('default', ['watch']);
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', ['build', 'watch', 'webserver']);

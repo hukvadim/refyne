@@ -118,23 +118,41 @@
 
 
 .header
-	background-color: var(--gray-light)
+	background-color: var(--ov-box-bg)
 	min-height: 67.5rem
 
 
 
 .header-slide
 	padding-top: 9.125rem
-	&__meta
+	& &__meta
 		margin: 0
-	&__title
+	& &__title
 		font-size: 6.5625rem
 		margin: 0
 		line-height: 1.25
 		margin-bottom: 2.625rem
 		font-weight: 400
 		letter-spacing: 0.09375rem
-	&__btn
+		color: var(--wh)
+		position: relative
+		z-index: 9
+		mix-blend-mode: difference
+	& &__btn
+	& &__gallery-holder
+		--t: 1.875rem
+		--r: 5.9375rem
+		position: absolute
+		top: var(--t)
+		right: var(--r)
+		.gallery-slide
+	& &__detail
+		--w: 9rem
+		--h: 9rem
+		position: absolute
+		bottom: -3.875rem
+		right: -4.5rem
+
 
 
 
@@ -185,8 +203,9 @@
 		justify-content: space-between
 	& &__text
 	& &__btn-holder
+		--mb: 0.55rem
 		align-self: flex-end
-		margin-bottom: 2.25rem
+		margin-bottom: var(--mb)
 
 
 
@@ -259,15 +278,38 @@
 			--rt: 87deg
 
 
+.gallery-slide
+	--offset-box: -35px
+	position: relative
+	overflow: hidden
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		left: -5%
+		width: 110%
+		height: 3.75rem
+		background-color: var(--ov-box-bg)
+		border-radius: 50%
+	&::before
+		top: var(--offset-box)
+	&::after
+		bottom: var(--offset-box)
+
 
 .gallery-mega-slide
+	--max-w: 66.25rem
 	background-color: var(--gray-light)
-	padding: 5rem 5rem 3.75rem 5rem
 	min-height: 40.625rem
+	width: var(--max-w)
+	margin: 0 auto
+	padding: 5rem 5rem 3.75rem 5rem
 	display: flex
 	flex-direction: column
 	justify-content: space-between
 	margin-bottom: 2.625rem
+	position: relative
+	transition: all .35s
 	& &__logo
 		max-width: 14.375rem
 		max-height: 3.75rem
@@ -286,6 +328,33 @@
 	& &__btn
 		margin-top: 2.5rem
 
+
+.slick-list
+	.gallery-item-bottom.slick-current ~ .gallery-item-bottom
+		.gallery-mega-slide
+			--max-w: 100%
+
+.gallery-item-bottom
+	&-btn
+		position: absolute
+		top: -2.5rem
+		right: 13.5%
+		z-index: 9
+		.icon
+			--sz: 1.0625rem
+	&-nav
+		& &__img
+			cursor: pointer
+			margin: 0 auto
+			width: auto
+			height: 100%
+			max-width: 7.25rem
+			max-height: 1.875rem
+
+.js-gallery-logo
+	.gallery-item-bottom-btn
+		&.slick-disabled
+			opacity: .5
 
 .gallery
 	& &__box

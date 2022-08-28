@@ -1,31 +1,13 @@
 {
-	"site_link": "https://frontend.inderio.com/",
-
-	"lazy_img": "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==",
-
-	"phone": "+38 (093) 76-08-697",
-	"phoneHref": "+380937608697",
-	"phoneNoPlus": "380937608697",
-
-	"telegram": "https://t.me/VadimGuk",
-	"viber"   : "viber://chat?number=%2B380937608697",
-
-	"presentation": "https://www.youtube.com/embed/pP5lsx-F_I0?autoplay=1&amp;controls=0&amp;loop=1&amp;rel=0&amp;showinfo=0",
-	"presentation_mutted": "https://www.youtube.com/embed/pP5lsx-F_I0?autoplay=1&amp;controls=0&amp;loop=1&amp;rel=0&amp;showinfo=0&mute=1&loop=1",
-
-	"course": {
-		"start": "18 серпня",
-		"days": "2 місяці",
-		"graph": "Пн, Ср, Пт: 19:00-21:00",
-		"price": "7 300 грн."
-	},
-
-	"social": {
-		"facebook"      : "https://www.facebook.com/gukvadim/",
-		"facebook_label": "facebook.com/gukvadim",
-		"upwork"        : "https://www.upwork.com/freelancers/vadimguk",
-		"upwork_label"  : "upwork.com/freelancers/vadimguk",
-		"behance"       : "https://www.behance.net/vadimguk",
-		"behance_label" : "behance.net/vadimguk"
+	"page": {
+		"components"  : "components.html",
+		"home"        : "index.html",
+		"about"       : "about-us.html",
+		"careers"     : "careers.html",
+		"careersPage" : "careers-detail.html",
+		"news"        : "news.html",
+		"newsPage"    : "news-detail.html",
+		"services"    : "services.html",
+		"servicesPaid": "services-paid.html"
 	}
 }

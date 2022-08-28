@@ -17,6 +17,8 @@
 	--typo-elm-mt: 1rem
 	--typo-elm-mb: 1rem
 
+	--ov-box-bg: var(--gray-light) // Gallery overlay boxes
+
 *, ::before, ::after
 	box-sizing: border-box
 
@@ -47,8 +49,9 @@ $bem: '.logo'
 			color: var(--wh)
 
 svg
-	--w: 1.5rem
-	--h: 1.5rem
+	--sz: 1.5rem 
+	--w: var(--sz)
+	--h: var(--sz)
 	position: relative
 	width: var(--w)
 	height: var(--h)
@@ -99,6 +102,11 @@ a
 
 .d-justify-between
 	justify-content: space-between
+
+.d-flex-center
+	display: flex
+	justify-content: center
+	align-items: center
 
 .tt-uppercase
 	text-transform: uppercase
@@ -222,6 +230,7 @@ $fzList: 14px 16px 18px
 	--card-min: auto
 	--card-max: auto
 	--fz-js: auto
+	--fz-as: auto
 	display: flex
 	justify-content: var(--jc)
 	align-items: var(--ai)
