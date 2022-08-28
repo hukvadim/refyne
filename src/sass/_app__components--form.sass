@@ -26,6 +26,7 @@ $bem: '.form-style'
 	--f-input-bd-h: var(--bl)
 	--f-input-pl-holder: #{$default-placeholder-color}
 	--f-input-c: var(--bl)
+	--f-input-fz: 1.125rem
 	--f-max: 100%
 	--f-height: 3.5rem
 	position: relative
@@ -40,24 +41,28 @@ $bem: '.form-style'
 		transition: all .25s
 		width: 100%
 		max-width: var(--f-max)
+		font-size: var(--f-input-fz)
 		&:hover,
 		&:focus,
 		&:focus-visible
 			outline: none
 			border-bottom: 0.0625rem solid var(--f-input-bd-h)
 	.form-btn
-		--c: var(--wh)
-		--c-h: var(--wh)
+		--c: var(--gray)
+		--c-h: var(--bl)
 		padding: 0
 		min-height: var(--f-height)
 		&:hover
-			color: var(--pr)
+			color: var(--c-h)
 	&--wh
-		--f-input-bd: #C2B5B5
+		--f-input-bd: var(--gray-light2)
 		--f-input-bd-h: var(--wh)
 		.form-input
 			&--wh
 				--f-input-c: var(--wh)
+		.form-btn
+			--c: var(--wh)
+			--c-h: var(--pr)
 	&--abs
 		.form-input
 			--p-right: 3.75rem

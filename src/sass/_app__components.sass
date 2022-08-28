@@ -140,8 +140,6 @@
 
 
 .block-title
-	--mt: 0.83em
-	--mb: 0.83em
 	font-size: 5.75rem
 	font-weight: 700
 	display: flex
@@ -149,8 +147,8 @@
 	flex-wrap: wrap
 	justify-content: flex-start
 	align-items: flex-start
-	margin-top: var(--mt)
-	margin-bottom: var(--mb)
+	margin-top: var(--typo-elm-mt)
+	margin-bottom: var(--typo-elm-mb)
 	& &__icon
 		line-height: 1
 		.text-line
@@ -167,6 +165,15 @@
 			letter-spacing: -0.0625rem
 			.text-line
 				--border: 1px
+
+.title-cols
+	.block-title-wrap
+		.block-title
+			--typo-elm-mt: 0 
+			--typo-elm-mb: 3.75rem
+	.block-text-wrap
+		.text-mutted
+			
 
 
 
@@ -291,3 +298,50 @@
 		font-size: 1rem
 		color: var(--gray-light2)
 
+
+
+.video-block
+	--min-h: 1080px
+	--img: url('../img/video-img.jpg')
+	min-height: var(--min-h)
+	background-image: var(--img)
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	& &__play
+		--fz: 0.75rem
+		--sz: 5.125rem
+		--bg-color: var(--pr)
+		--t-style: none
+		--t: 13.125rem
+		--r: 25.9375rem
+		position: absolute
+		top: var(--t)
+		right: var(--r)
+
+
+
+.join-team
+	background-color: var(--gray-light)
+	.blog-card
+		.blog-card__category
+			--fz: 1.25rem
+			--mb: -0.625rem
+	.block-title
+		&__text
+			&-line
+				.text-line
+					width: 110%
+	.form-style
+		margin-top: 5rem
+	.detail
+		&.detail-1
+			--t: -8.875rem
+			--r: -28.75rem
+			--sz: 20.625rem
+			--rt: -192deg
+		&.detail-2
+			--b: -12.75rem
+			--l: -31.625rem
+			--sz: 24.375rem
+			--rt: 127deg

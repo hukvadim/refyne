@@ -1,17 +1,21 @@
 .btn
 	--h: 2.5rem
 	--fz: 1.0625rem
+	--fw: 600
 	--c: var(--pr)
 	--c-h: var(--pr)
+	--t-style: uppercase
+	--flex-jc: flex-start
+	--flex-ai: center
 	color: var(--c)
 	font-size: var(--fz)
 	min-height: var(--h)
-	font-weight: 600
+	font-weight: var(--fw)
 	line-height: 1
-	text-transform: uppercase
+	text-transform: var(--t-style)
 	display: flex
-	justify-content: flex-start
-	align-items: center
+	justify-content: var(--flex-jc)
+	align-items: var(--flex-ai)
 	letter-spacing: 0.053125rem
 	&:hover
 		color: var(--c-h)
@@ -39,3 +43,19 @@
 		background-color: transparent
 		border: none
 		outline: none
+	&-circle
+		--fw: 400
+		--sz: 4.5rem
+		--bg-color: var(--bl)
+		--bg-color-h: var(--bl)
+		--c: var(--wh)
+		--flex-jc: center
+		--flex-ai: center
+		width: var(--sz)
+		height: var(--sz)
+		background-color: var(--bg-color)
+		color: var(--c)
+		border-radius: 50%
+		&:hover
+			background-color: var(--bg-color-h)
+			color: var(--wh)

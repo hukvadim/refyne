@@ -12,7 +12,12 @@
 	--wh: #fff
 	--bl: #000
 
-*, ::before, ::after 
+	--typo-elm-pt: 0
+	--typo-elm-pb: 0
+	--typo-elm-mt: 1rem
+	--typo-elm-mb: 1rem
+
+*, ::before, ::after
 	box-sizing: border-box
 
 body
@@ -90,10 +95,10 @@ a
 	display: flex
 
 .d-justify
-	justify-content: center 
+	justify-content: center
 
 .d-justify-between
-	justify-content: space-between 
+	justify-content: space-between
 
 .tt-uppercase
 	text-transform: uppercase
@@ -169,6 +174,10 @@ $fzList: 14px 16px 18px
 .text-mutted
 	font-size: 1rem
 	color: var(--gray)
+	padding-top: var(--typo-elm-pt)
+	padding-bottom: var(--typo-elm-pb)
+	margin-top: var(--typo-elm-mt)
+	margin-bottom: var(--typo-elm-mb)
 
 
 .list
@@ -212,6 +221,7 @@ $fzList: 14px 16px 18px
 	--card-width: 100%
 	--card-min: auto
 	--card-max: auto
+	--fz-js: auto
 	display: flex
 	justify-content: var(--jc)
 	align-items: var(--ai)
@@ -222,14 +232,16 @@ $fzList: 14px 16px 18px
 		padding: 0 var(--intval)
 		min-width: var(--card-min)
 		max-width: var(--card-max)
+		align-self: var(--fz-as)
+		justify-self: var(--fz-js)
 
 
 .detail
 	--sz: 31.25rem
 	--c: #EE665F
-	--t : initial 
-	--b : initial 
-	--r : initial 
+	--t : initial
+	--b : initial
+	--r : initial
 	--l : initial
 	--rt: 0deg
 	position: absolute
