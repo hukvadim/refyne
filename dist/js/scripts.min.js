@@ -32,3 +32,12 @@ $('.js-blog-list').slick({
 	prevArrow: '',
 	nextArrow: '<div class="gallery-item-btn btn btn-circle"><svg class="icon icon-arrows"><use xlink:href="#icon-arrows"></use></svg></div>',
 });
+
+
+$('.js-gallery').slick({
+	infinite: false,
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	dots: false,
+	arrows: false
+});

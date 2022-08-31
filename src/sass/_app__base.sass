@@ -17,6 +17,8 @@
 	--typo-elm-mt: 1rem
 	--typo-elm-mb: 1rem
 
+	--img-hero-sz: 9rem
+
 	--ov-box-bg: var(--gray-light) // Gallery overlay boxes
 
 *, ::before, ::after
@@ -93,6 +95,14 @@ a
 
 .relative
 	position: relative
+
+.abs-center
+	--t: 50%
+	--l: 50%
+	position: absolute
+	top: var(--t)
+	left: var(--l)
+	transition: translate(calc(var(--t) * -1), calc(var(--l) * -1))
 
 .d-flex
 	display: flex
@@ -180,12 +190,14 @@ $fzList: 14px 16px 18px
 
 
 .text-mutted
+	--max-w: initial
 	font-size: 1rem
 	color: var(--gray)
 	padding-top: var(--typo-elm-pt)
 	padding-bottom: var(--typo-elm-pb)
 	margin-top: var(--typo-elm-mt)
 	margin-bottom: var(--typo-elm-mb)
+	max-width: var(--max-w)
 
 
 .list
@@ -262,6 +274,31 @@ $fzList: 14px 16px 18px
 	right: var(--r)
 	left: var(--l)
 	transform: rotate(var(--rt))
+
+
+.animation-graph-container
+	position: absolute
+	svg
+		width: 87.5rem
+		height: 95.25rem
+	.graph-text
+		position: absolute
+		i
+			position: absolute
+	.circle-bg
+		fill: none
+		stroke: var(--gray-light)
+		stroke-width: 6
+	.graph-circle
+		fill: none
+		stroke-linecap: initial
+		stroke-width: 6
+		stroke: var(--pr)
+		animation: progress 1s ease-out forwards
+@keyframes progress
+	0%
+		stroke-dasharray: 0 100
+ 
 
 
 .rotate

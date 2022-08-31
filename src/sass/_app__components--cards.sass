@@ -1,7 +1,13 @@
 $bem: '.blog-list'
 .blog-list
+	--card-p-lr: 55px
+	--card-max: 520px
+	.blog-card
+		padding-top: 6.25rem
 	&--inline
+		--card-p-lr: 0
 		.blog-card
+			padding-top: 0
 			margin-bottom: 14.0625rem
 			&:last-child
 				margin-bottom: 0
@@ -10,7 +16,8 @@ $bem: '.blog-list'
 			&.grid-item
 				text-align: right
 		.blog-card
-			padding: 3.125rem 1.25rem 0
+			--card-p-lr: 1.25rem
+			padding-top: 3.125rem
 		#{$bem}__slider
 			padding: 3.75rem 0 0
 		#{$bem}__btn
@@ -24,11 +31,16 @@ $bem: '.blog-list'
 		top: 3.75rem
 		right: 21.3%
 		z-index: 9
+		.icon
+			--sz: 1.25rem
 
 
 
 $bem: '.blog-card'
 .blog-card
+	padding-left: var(--card-p-lr)
+	padding-right: var(--card-p-lr)
+	max-width: var(--card-max)
 	&:hover
 		#{$bem}__img
 			transform: rotate(5deg) 
@@ -57,7 +69,7 @@ $bem: '.blog-card'
 		--dot-sz: 0.5rem
 		--dot-c: var(--pr)
 		--p: 1.5rem
-		--c: var(--bl)
+		--c: var(--gray-light2)
 		--mb: 1.5625rem
 		position: relative
 		display: flex
@@ -88,16 +100,18 @@ $bem: '.blog-card'
 		align-content: flex-start
 		#{$bem}__img-hold
 			margin-bottom: 0
-			padding-right: 4.375rem
+			min-width: 31.875rem
 		#{$bem}__category
 			--fz: 1.25rem
 			--p: 1.5rem
 			--mb: 1.75rem
+			--c: var(--bl)
 		#{$bem}__title
 			--fz: 3rem
 			--fw: 700
 			--m: 0 0 1.125rem
-		#{$bem}__tag-list
+		#{$bem}__text-hold
+			padding-right: 4.375rem
 	&--small
 		max-width: 31.875rem
 		#{$bem}__title
