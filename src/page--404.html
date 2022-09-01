@@ -1,14 +1,33 @@
 @@include('_system--header.html', {
-"title": 'Курси програмування Львів | Веб розробка | Курс Frontend з нуля',
-"desc": 'ᐅ Курси web програмування, веб-розробки у Львові. Ніколи не пізно почати карєру в IT Frontend розробником!!! Програмування сайтів для початківців. Працевлаштування. Зручний графік. Супер ціна.',
-"keywords": 'курси front-end, курси веб-програмування, курси javascript, курси html, курси веб програмування',
-"social": 'img/social.jpg',
+	"title": 'Page 404',
+	"desc": '',
+	"keywords": '',
+	"social": '',
+	"page-class": 'page-404',
 })
 
 @@include('_block--nav.html')
 
 
+<div class="header header--404 nav-padding ov-hidden detail-holder" style="--ov-box-bg: var(--gray-light)">
+	<div class="container">
 
+		<div class="header__hold block-divider" style="--m: 5rem 0 0">
+			<p class="header__meta text-mutted">Erorr 404</p>
+			<h2 class="header__title">PAGE <span class="italic fw-700">NOT FOUND</span></h2>
+			<a href="@@page.home" class="header__btn btn btn-light block-divider" style="--m: 1.5625rem 0 0">
+				<span class="btn-text">Home page</span>
+				<span class="btn-icon btn-icon--fill">
+					<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+				</span>
+			</a>
+		</div>
+
+		<svg class="detail detail-1 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg>
+		<svg class="detail detail-2 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg>
+
+	</div> <!-- .container -->
+</div> <!-- .header -->
 
 
 

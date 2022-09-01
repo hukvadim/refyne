@@ -89,6 +89,13 @@
 
 
 
+.social-btns
+	margin: 0 -1.125rem
+	& &__btn
+		margin: 0 1.125rem
+
+
+
 
 .icon-near-text
 	display: flex
@@ -98,7 +105,7 @@
 	&__icon
 		margin-right: 2.375rem
 		.icon
-			--s: 50px
+			--s: 3.125rem
 			width: var(--s)
 			height: var(--s)
 	&__wrap
@@ -115,47 +122,31 @@
 
 
 
-
-
-$bem: '.header'
-.header
-	background-color: var(--ov-box-bg)
-	min-height: 67.5rem
-	&--big-text
-		#{$bem}__meta
-			--typo-elm-mb: 0
-			--typo-elm-pt: 3.625rem
-			font-size: 1.25rem
-		#{$bem}__title
-			--typo-elm-mt: 0
-			--typo-elm-mb: 1.875rem
-			font-size: 6.875rem
-			font-weight: 400
-		.detail-hero
-			position: absolute
-			top: 1rem
-			right: -3.5rem
-			width: var(--img-hero-sz)
-			height: var(--img-hero-sz)
-		.detail-1
-			--sz: 40.625rem
-			--t: -36.25rem
-			--r: 10rem
-
-
-
 .header-slide
-	padding-top: 9.125rem
+	--pt: 9.125rem
+	padding-top: var(--pt)
 	& &__meta
-		margin: 0
+		--typo-elm-mt: 0
+		--typo-elm-mb: 0
+		&-el
+			font-size: 1.25rem
+			margin-right: 2.1875rem
+			&:last-child
+				margin-right: 0
 	& &__title
-		font-size: 6.5625rem
+		--mb: 2.625rem
+		--fz: 6.5625rem
+		--line-h: 1.25
+		--letr-sp: 0.09375rem
+		--c: var(--wh)
+		--fw: 400
+		font-size: var(--fz)
 		margin: 0
-		line-height: 1.25
-		margin-bottom: 2.625rem
-		font-weight: 400
-		letter-spacing: 0.09375rem
-		color: var(--wh)
+		line-height: var(--line-h)
+		margin-bottom: var(--mb)
+		font-weight: var(--fw)
+		letter-spacing: var(--letr-sp)
+		color: var(--c)
 		position: relative
 		z-index: 9
 		mix-blend-mode: difference
@@ -176,8 +167,70 @@ $bem: '.header'
 
 
 
+$bem: '.header'
+.header
+	background-color: var(--ov-box-bg)
+	min-height: 67.5rem
+	& &__hold
+	& &__meta
+		--fz: 1.25rem
+		font-size: var(--fz)
+	& &__title
+		--fz: 6.875rem
+		font-size: var(--fz)
+		margin-left: -0.375rem
+	&--big-text
+		#{$bem}__meta
+			--typo-elm-mb: 0
+			--typo-elm-pt: 3.625rem
+			font-size: 1.25rem
+		#{$bem}__title
+			--typo-elm-mt: 0
+			--typo-elm-mb: 1.875rem
+			font-size: 6.875rem
+			font-weight: 400
+		.detail-hero
+			position: absolute
+			top: 1rem
+			right: -3.5rem
+			width: var(--img-hero-sz)
+			height: var(--img-hero-sz)
+		.detail-1
+			--sz: 40.625rem
+			--t: -36.25rem
+			--r: 10rem
+	&--avatar
+		#{$bem}__hold
+			.header-slide
+				--pt: 5.125rem
+				max-width: 60%
+				&__meta
+					
+				&__title
+					--mb: 3.375rem
+					--fz: 6.875rem
+					--line-h: 1.15
+					--letr-sp: 0
+					margin-left: -0.375rem
+				&__text
+					--mb: 3.375rem
+					max-width: 38.75rem
+		.user-img-text
+			--m: 3.875rem 0 0
+	&--404
+		#{$bem}__meta
+		#{$bem}__title
+			--typo-elm-mt: 1.875rem
+		#{$bem}__btn
+		.detail-2
+			--l: -36.625rem
 
 
+
+
+
+
+$bem: '.block-title'
 .block-title
 	--fz: 5.75rem
 	font-size: var(--fz)
@@ -200,11 +253,21 @@ $bem: '.header'
 		letter-spacing: -0.0625rem
 		&-line
 			--fz-ghost: 5.75rem
-			margin-top: -0.125rem
-			margin-left: -0.3125rem
+			--mt: -0.125rem
+			--mb: -0.3125rem
+			margin-top: var(--mt)
+			margin-left: var(--mb)
 			letter-spacing: -0.0625rem
 			.text-line
-				--border: 1px
+				--border: 0.0625rem
+	&--sm
+		--fz: 3.5rem
+		#{$bem}__text
+			&-line
+				--fz-ghost: var(--fz)
+				--mt: 1.125rem
+
+
 
 .title-cols
 	.block-title-wrap
@@ -216,6 +279,27 @@ $bem: '.header'
 			
 
 
+.user-img-text
+	display: flex
+	flex-direction: row
+	flex-wrap: nowrap
+	align-content: center
+	justify-content: flex-start
+	align-items: center
+	&__ava
+		border-radius: 50%
+		&-hold
+	&__content
+		margin-left: 1.875rem
+	&__name
+		font-size: 1.25rem
+		font-weight: 600
+		margin: 0 0 0.5rem
+		letter-spacing: -0.01875rem
+	&__work
+		font-size: 0.875rem
+		font-weight: 400
+		margin: 0
 
 
 
@@ -495,3 +579,4 @@ $bem: '.quotation'
 			--typo-elm-mb: 2.5rem
 		.text-mutted
 			--max-w: 31.875rem
+

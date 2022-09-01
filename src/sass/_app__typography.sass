@@ -6,15 +6,127 @@ h1, h2, h3, h4, h5, h6
 	margin-top: var(--typo-elm-mt)
 	margin-bottom: var(--typo-elm-mb)
 
+p
+	--lh: 1.62
+	line-height: var(--lh)
+	padding-top: var(--typo-elm-pt)
+	padding-bottom: var(--typo-elm-pb)
+	margin-top: var(--typo-elm-mt)
+	margin-bottom: var(--typo-elm-mb)
+
+ul, ol
+	padding: 0
+	list-style-type: none
+	margin-top: var(--typo-elm-mt)
+	margin-bottom: var(--typo-elm-mb)
+	li
+		position: relative
+		padding: 0
+		padding-left: 1.25rem
+		margin-top: var(--typo-elm-mt)
+		margin-bottom: var(--typo-elm-mb)
+		--dot-sz: 0.3125rem
+		&::before
+			content: ''
+			position: absolute
+			top: 0.625rem
+			left: 0
+			width: var(--dot-sz)
+			height: var(--dot-sz)
+			border-radius: 50%
+			background-color: currentColor
+
+
+.page-content
+	.container
+		--w: 71.25rem
+	& &__title
+		--fz: 3.5rem
+		--lh: 1.6
+		--c: var(--bl)
+		font-size: var(--fz)
+		line-height: var(--lh)
+		color: var(--c)
+		--typo-elm-mt: 8.875rem
+		--typo-elm-mb: 3.4375rem
+	& &__typo
+		max-width: var(--w)
+		margin: 0 auto 3.125rem
+	& &__footer
+		--p: 5.3125rem 0 0
+		.grid-item
+			&--text
+				--card-max: 26.25rem
+			&--social
+				--mb: 1.25rem
+		.block-title
+			--fz: 3.5rem
+			--fz-ghost: 3.5rem
+
+
+
+
 .typography
-	color: $default-text-color
-	overflow: auto
+	color: var(--typo-elm-c)
+	line-height: var(--typo-elm-lh)
+	--typo-elm-mt: 2rem
+	--typo-elm-mb: 2rem
 
-	&,
-	p
-		line-height: 1.6
-		font-size: $default-font-size
+	a
+		&:hover
 
 	p
-		padding: rem(10px) 0 rem(12px) 0
-		margin: 0
+		max-width: 52.5rem
+		margin-left: auto
+		margin-right: auto
+		font-weight: 400
+
+
+	h1, h2, h3, h4, h5, h6
+		--typo-elm-mt: 3.75rem
+		max-width: var(--w)
+		margin-left: auto
+		margin-right: auto
+		color: var(--bl)
+
+	h1
+		font-size: 3.5rem
+	h2
+		font-size: 3rem
+	h3
+		font-size: 2.5rem
+	h4
+		font-size: 2rem
+	h5
+		font-size: 1.5rem
+	h6
+		font-size: 1rem
+
+	img
+		max-width: var(--typo-elm-img-max)
+		width: 140%
+		margin-left: -5%
+
+	figure
+		p
+
+	figcaption
+		max-width: var(--typo-elm-img-max)
+		color: var(--gray)
+		font-size: 0.875rem
+		margin: -1.25rem auto 0
+
+	pre
+
+	code
+
+	table
+
+	ul
+		max-width: 52.5rem
+		margin-left: auto
+		margin-right: auto
+		li
+			margin-top: 0.25rem
+			margin-bottom: 0.25rem
+		

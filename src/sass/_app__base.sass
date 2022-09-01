@@ -16,10 +16,15 @@
 	--typo-elm-pb: 0
 	--typo-elm-mt: 1rem
 	--typo-elm-mb: 1rem
+	--typo-elm-lh: 1.62
+	--typo-elm-c:  #4D4242
+	--typo-elm-img-max: 58.125rem
 
 	--img-hero-sz: 9rem
 
 	--ov-box-bg: var(--gray-light) // Gallery overlay boxes
+
+	--nav-padding: 11.25rem
 
 *, ::before, ::after
 	box-sizing: border-box
@@ -187,6 +192,8 @@ $fzList: 14px 16px 18px
 	--m: 0
 	margin: var(--m)
 	padding: var(--p)
+	position: relative
+	z-index: 5
 
 
 .text-mutted
@@ -255,6 +262,10 @@ $fzList: 14px 16px 18px
 		max-width: var(--card-max)
 		align-self: var(--fz-as)
 		justify-self: var(--fz-js)
+		&--bottom-right
+			--fz-as: flex-end
+			--mb: 0
+			margin-bottom: var(--mb)
 
 
 .detail
@@ -310,3 +321,15 @@ $fzList: 14px 16px 18px
 		transform: rotate(0deg)
 	to
 		transform: rotate(360deg)
+
+
+
+.detail-holder
+	.detail-1
+		--t: -6.5rem
+		--r: -27.5rem
+		--sz: 29.8125rem
+	.detail-2
+		--b: -15.625rem
+		--l: -31.625rem
+		--sz: 35.625rem

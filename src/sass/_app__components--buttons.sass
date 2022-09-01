@@ -27,9 +27,9 @@
 		align-items: center
 		margin-left: 0.625rem
 		.icon
-			--s: 0.875rem
-			width: var(--s)
-			height: var(--s)
+			--sz: 0.875rem
+			width: var(--sz)
+			height: var(--sz)
 			position: relative
 			top: 0.0625rem
 		&--fill
@@ -37,7 +37,7 @@
 			color: var(--wh)
 			border-radius: 50%
 			.icon
-				--s: 12px
+				--sz: 12px
 				top: 0
 	&-transparent
 		background-color: transparent
@@ -59,3 +59,11 @@
 		&:hover
 			background-color: var(--bg-color-h)
 			color: var(--wh)
+		&-sm
+			--sz: 2.5rem
+			.icon
+				--sz: 1.25rem
+		&-primary
+			--bg-color: var(--pr)
+			--bg-color-h: var(--pr)
+			--c: var(--wh)
