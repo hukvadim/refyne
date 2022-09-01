@@ -1303,8 +1303,7 @@ ul, ol {
     color: var(--c);
     padding-left: var(--p);
     font-size: var(--fz);
-    margin: 0 0 var(--mb);
-    justify-content: flex-end; }
+    margin: 0 0 var(--mb); }
     .blog-card__category::before {
       content: '';
       position: absolute;
@@ -1392,6 +1391,8 @@ ul, ol {
   .blog-list--offset-reverse .blog-list__slider {
     margin-right: var(--offset-minus-margin);
     margin-left: -50%; }
+    .blog-list--offset-reverse .blog-list__slider .blog-card__category {
+      justify-content: flex-end; }
   .blog-list--default {
     --card-max: 500px;
     --offset-padding: 50px;
