@@ -8,7 +8,7 @@
 
 @@include('_block--nav.html')
 
-<div class="header header--avatar nav-padding ov-hidden" style="--ov-box-bg: var(--gray-light)">
+<div class="header header--avatar nav-padding">
 	<div class="container">
 
 		<div class="header__hold">
@@ -51,7 +51,7 @@
 
 
 
-<div class="page-content">
+<div class="page-content block-divider">
 	<div class="container">
 
 		<h1 class="page-content__title">Jeg har opsagt min stilling – hvad så nu?</h1>
@@ -148,7 +148,7 @@
 						</span>
 					</h2>
 				</div>
-				<div class="grid-item grid-item--bottom-right grid-item--social">
+				<div class="grid-item grid-item--bottom-left grid-item--social">
 					<div class="social-btns text-center">
 						<a href="#" class="social-btns__btn btn btn-circle btn-circle-sm btn-circle-primary">
 							<svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
@@ -165,9 +165,7 @@
 					</div>	
 				</div>
 			</div>
-			
 		</div>
-		
 	</div>
 </div>
 
@@ -177,98 +175,18 @@
 
 
 
+@@include('_block--join-team.html')
 
 
 
 
 
+@@include('_block--gallery-small.html', {"titleNum": "01", "cssClass": "news-detail-blog-small"})
 
 
 
-<div class="join-team ov-hidden block-divider" style="--p: 9.875rem 0 14.0625rem; --m: 19.6875rem 0 0">
-	<div class="container">
-		<div class="join-team__box grid">
-			<div class="join-team__box-item grid-item">
-				<div class="blog-card blog-card--ghost">
-					<div class="blog-card__text-hold">
-						<p class="blog-card__category">Contact us</p>
-						<h2 class="block-title" style="--typo-elm-mb: 0.5rem">
-							<span class="block-title__text">ready</span>
-							<span class="block-title__text-line text-line-with-ghost">
-								<span class="text-ghost">to start work?</span>
-								<svg class="text-line">
-									<text x="6" y="80" fill="none">to start work?</text>
-								</svg>
-							</span>
-						</h2>
-						<a href="#" class="gallery-mega-slide__btn btn btn-light mb-20">
-							<span class="btn-text">Contact us</span>
-							<span class="btn-icon">
-								<svg class="icon icon-arrow-right" style="--s: 1.0625rem;"><use xlink:href="#icon-arrow-right"></use></svg>
-							</span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="join-team__box-item grid-item" style="--fz-as: center; --card-max: 542px;">
-				<p class="text-mutted">We have expertise in many different areas ranging from retail to the medical domain. Each year, we strengthen our working on more challenging ones.</p>
-				<form class="form-style form-style--abs">
-					<input type="email" name="email" class="form-input form-input--wh" placeholder="Enter your email">
-					<button class="form-btn btn btn-transparent">Send</button>
-				</form>
-			</div>
-		</div>
-
-		<svg class="detail detail-1 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg>
-		<svg class="detail detail-2 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg>
-	</div>
-</div>
 
 
-
-<div class="blog-list blog-list--small block-divider" style="--p: 14.125rem 0 19.125rem">
-	<div class="container">
-		<div class="blog-list__box grid">
-			<div class="gallery__text grid-item">
-				<h2 class="block-title" style="--mb: 2rem">
-					<span class="block-title__icon">
-						<svg class="text-line" style="--h: 2.875rem">
-							<text x="0" y="35" fill="none">05</text>
-						</svg>
-					</span>
-					<span class="block-title__text">featured</span>
-					<span class="block-title__text-line text-line-with-ghost">
-						<span class="text-ghost">news</span>
-						<svg class="text-line">
-							<text x="0" y="80" fill="none">news</text>
-						</svg>
-					</span>
-				</h2>
-				<p class="text-mutted" style="max-width: 620px">Vi kan hjælpe dig, uanset om du ønsker at sælge flere produkter, få flere leads eller at blive mere synlig som virksomhed.</p>
-			</div>
-			<div class="blog-list__btn-holder grid-item">
-				<a href="#" class="blog-list__btn btn btn-light">
-					<span class="btn-text">EXPLORE</span>
-					<span class="btn-icon">
-						<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
-					</span>
-				</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="blog-list__slider js-blog-list">
-
-		@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
-		@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
-		@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.2.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
-		@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
-		@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
-
-	</div>
-
-	
-</div>
 
 
 

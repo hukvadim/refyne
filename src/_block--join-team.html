@@ -1,0 +1,38 @@
+<div class="join-team block-divider">
+	<div class="container">
+		<div class="join-team__box grid">
+			<div class="join-team__box-title grid-item">
+				<div class="blog-card blog-card--ghost">
+					<div class="blog-card__text-hold">
+						<p class="blog-card__category">@@if (context.category) { @@category }@@if (!context.category) { Contact us }</p>
+						<h2 class="block-title">
+							<span class="block-title__text">@@if (context.title) { @@title }@@if (!context.title) { ready }</span>
+							<span class="block-title__text-line text-line-with-ghost">
+								<span class="text-ghost">@@if (context.titleLine) { @@titleLine }@@if (!context.titleLine) { to start work? }</span>
+								<svg class="text-line">
+									<text x="6" y="80" fill="none">@@if (context.titleLine) { @@titleLine }@@if (!context.titleLine) { to start work? }</text>
+								</svg>
+							</span>
+						</h2>
+						<a href="#" class="gallery-mega-slide__btn btn btn-light mb-20">
+							<span class="btn-text">@@if (context.btn) { @@btn }@@if (!context.btn) { Contact us }</span>
+							<span class="btn-icon">
+								<svg class="icon icon-arrow-right" style="--s: 1.0625rem;"><use xlink:href="#icon-arrow-right"></use></svg>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="join-team__box-text grid-item">
+				<p class="text-mutted">We have expertise in many different areas ranging from retail to the medical domain. Each year, we strengthen our working on more challenging ones.</p>
+				<form class="form-style form-style--abs">
+					<input type="email" name="email" class="form-input form-input--wh" placeholder="Enter your email">
+					<button class="form-btn btn btn-transparent">Send</button>
+				</form>
+			</div>
+		</div>
+
+		<svg class="detail detail-1 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg>
+		<svg class="detail detail-2 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg>
+	</div>
+</div>

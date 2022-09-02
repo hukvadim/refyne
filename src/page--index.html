@@ -8,14 +8,13 @@
 
 @@include('_block--nav.html')
 
-
-<div class="header nav-padding" style="--ov-box-bg: var(--gray-light)">
+<div class="header nav-padding">
 	<div class="container">
 
-		<div class="header-slide" style="max-width: 80%;">
+		<div class="header-slide">
 			<p class="header-slide__meta text-mutted">Refyne Agency</p>
 			<h2 class="header-slide__title">We integrate strategy, <span class="italic fw-700">creativity</span> to build brands</h2>
-			<a href="#" class="header-slide__btn btn btn-light block-divider" style="--m: 0 0 1.25rem">
+			<a href="#" class="header-slide__btn btn btn-light block-divider">
 				<span class="btn-text">Contact us</span>
 				<span class="btn-icon btn-icon--fill">
 					<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
@@ -43,14 +42,14 @@
 </div>
 
 
-<div class="partners block-divider" style="--p: 16.875rem 0 0">
+<div class="partners block-divider">
 	<div class="container">
 		
 		<div class="partners__box d-flex">
 			<div class="partners__text">
 				<h2 class="block-title">
 					<span class="block-title__icon">
-						<svg class="text-line" style="--h: 2.875rem">
+						<svg class="text-line">
 							<text x="0" y="35" fill="none">01</text>
 						</svg>
 					</span>
@@ -76,7 +75,7 @@
 </div>
 
 
-<div class="preference block-divider" style="--p: 8rem 0 0">
+<div class="preference block-divider">
 	<div class="container">
 
 		<div class="grid">
@@ -114,11 +113,11 @@
 
 
 
-<div class="services block-divider" style="--p: 18rem 0 14.25rem">
+<div class="services block-divider">
 	<div class="container">
 		<h2 class="block-title">
 			<span class="block-title__icon">
-				<svg class="text-line" style="--h: 2.875rem">
+				<svg class="text-line">
 					<text x="0" y="35" fill="none">02</text>
 				</svg>
 			</span>
@@ -175,122 +174,22 @@
 </div>
 
 
-<div class="blog-list blog-list--inline block-divider" style="--p: 17.875rem 0 0; --card-max: 100%">
-	<div class="container">
-
-		<h2 class="block-title">
-			<span class="block-title__icon">
-				<svg class="text-line" style="--h: 2.875rem">
-					<text x="0" y="35" fill="none">03</text>
-				</svg>
-			</span>
-			<span class="block-title__text">featured</span>
-			<span class="block-title__text-line text-line-with-ghost">
-				<span class="text-ghost">projects</span>
-				<svg class="text-line">
-					<text x="0" y="80" fill="none">projects</text>
-				</svg>
-			</span>
-		</h2>
-
-		<div class="blog-list__holder block-divider" style="--p: 13.25rem 0 0">
-			
-			@@include('_block--card-inline.html', {"cardImg": "img/blog-card-1.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
-			@@include('_block--card-inline.html', {"cardImg": "img/blog-card-1.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
-			@@include('_block--card-inline.html', {"cardImg": "img/blog-card-1.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
-
-		</div>
-
-	</div>
-</div>
 
 
-<div class="gallery block-divider" style="--p: 18.75rem 0 0">
-	<div class="container">
-		<div class="gallery__box d-flex">
-			<div class="gallery__text">
-				<h2 class="block-title" style="--mb: 2rem">
-					<span class="block-title__icon">
-						<svg class="text-line" style="--h: 2.875rem">
-							<text x="0" y="35" fill="none">04</text>
-						</svg>
-					</span>
-					<span class="block-title__text">vi har før</span>
-					<span class="block-title__text-line text-line-with-ghost">
-						<span class="text-ghost">hjulpet andre</span>
-						<svg class="text-line">
-							<text x="0" y="80" fill="none">hjulpet andre</text>
-						</svg>
-					</span>
-				</h2>
-				<p class="text-mutted" style="max-width: 620px">Vi kan hjælpe dig, uanset om du ønsker at sælge flere produkter, få flere leads eller at blive mere synlig som virksomhed.</p>
-			</div>
-			<div class="gallery__btn-holder">
-				<span class="text-mutted gallery__meta-item">Drag to navigate</span>
-			</div>
-		</div>
-	</div>
-
-	<div class="js-gallery-logo">
-		@@include('_block--gallery-item.html', {"cardImgLogo": "img/logo-1.png",  "cardImg": "img/blog-card-1.jpg",})
-		@@include('_block--gallery-item.html', {"cardImgLogo": "img/logo-2.png",  "cardImg": "img/blog-card-1.jpg",})
-		@@include('_block--gallery-item.html', {"cardImgLogo": "img/logo-3.png",  "cardImg": "img/blog-card-1.jpg",})
-	</div>
-
-	<div class="container">
-		<div class="js-gallery-logo-nav block-divider" style="--m: 5.125rem 0">
-			<div class="gallery-item-bottom-nav"><img src="img/logo-1.png" alt="" class="gallery-item-bottom-nav__img"></div>
-			<div class="gallery-item-bottom-nav"><img src="img/logo-2.png" alt="" class="gallery-item-bottom-nav__img"></div>
-			<div class="gallery-item-bottom-nav"><img src="img/logo-3.png" alt="" class="gallery-item-bottom-nav__img"></div>
-		</div>
-	</div>
-
-</div>
+@@include('_block--gallery-inline.html', {"titleNum": "03", "cssClass": "home-blog-inline"})
 
 
-<div class="blog-list blog-list--small block-divider" style="--p: 14.125rem 0 19.125rem">
-	<div class="container">
-		<div class="blog-list__box grid">
-			<div class="gallery__text grid-item">
-				<h2 class="block-title" style="--mb: 2rem">
-					<span class="block-title__icon">
-						<svg class="text-line" style="--h: 2.875rem">
-							<text x="0" y="35" fill="none">05</text>
-						</svg>
-					</span>
-					<span class="block-title__text">featured</span>
-					<span class="block-title__text-line text-line-with-ghost">
-						<span class="text-ghost">news</span>
-						<svg class="text-line">
-							<text x="0" y="80" fill="none">news</text>
-						</svg>
-					</span>
-				</h2>
-				<p class="text-mutted" style="max-width: 620px">Vi kan hjælpe dig, uanset om du ønsker at sælge flere produkter, få flere leads eller at blive mere synlig som virksomhed.</p>
-			</div>
-			<div class="blog-list__btn-holder grid-item">
-				<a href="#" class="blog-list__btn btn btn-light">
-					<span class="btn-text">EXPLORE</span>
-					<span class="btn-icon">
-						<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
-					</span>
-				</a>
-			</div>
-		</div>
-	</div>
 
-	<div class="blog-list__slider js-blog-list">
 
-		@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
-		@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
-		@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.2.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
-		@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
-		@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
+@@include('_block--gallery.html', {"titleNum": "04"})
 
-	</div>
 
-	
-</div>
+
+
+@@include('_block--gallery-small.html', {"titleNum": "05", "cssClass": "home-blog-small"})
+
+
+
 
 
 

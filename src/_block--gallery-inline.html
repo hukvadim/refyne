@@ -1,0 +1,28 @@
+<div class="@@if (context.cssClass) {@@cssClass }blog-list blog-list--inline block-divider">
+	<div class="container">
+
+		<h2 class="block-title">
+			<span class="block-title__icon">
+				<svg class="text-line">
+					<text x="0" y="35" fill="none">@@if (context.titleNum) { @@titleNum }@@if (!context.titleNum) { 01 }</text>
+				</svg>
+			</span>
+			<span class="block-title__text">featured</span>
+			<span class="block-title__text-line text-line-with-ghost">
+				<span class="text-ghost">projects</span>
+				<svg class="text-line">
+					<text x="0" y="80" fill="none">projects</text>
+				</svg>
+			</span>
+		</h2>
+
+		<div class="blog-list__hold blog-list__hold--inline">
+			
+			@@include('_block--card-inline.html', {"cardImg": "img/blog-card-0.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
+			@@include('_block--card-inline.html', {"cardImg": "img/blog-card-1.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
+			@@include('_block--card-inline.html', {"cardImg": "img/blog-card-0.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
+
+		</div>
+
+	</div>
+</div>

@@ -1,0 +1,41 @@
+<div class="gallery block-divider">
+	<div class="container">
+		<div class="gallery__box d-flex">
+			<div class="gallery__text">
+				<h2 class="block-title">
+					<span class="block-title__icon">
+						<svg class="text-line">
+							<text x="0" y="35" fill="none">@@if (context.titleNum) { @@titleNum }@@if (!context.titleNum) { 02 }</text>
+						</svg>
+					</span>
+					<span class="block-title__text">@@if (context.title) { @@title }@@if (!context.title) { vi har før }</span>
+					<span class="block-title__text-line text-line-with-ghost">
+						<span class="text-ghost">@@if (context.titleLine) { @@titleLine }@@if (!context.titleLine) { hjulpet andre }</span>
+						<svg class="text-line">
+							<text x="0" y="80" fill="none">@@if (context.titleLine) { @@titleLine }@@if (!context.titleLine) { hjulpet andre }</text>
+						</svg>
+					</span>
+				</h2>
+				<p class="text-mutted">Vi kan hjælpe dig, uanset om du ønsker at sælge flere produkter, få flere leads eller at blive mere synlig som virksomhed.</p>
+			</div>
+			<div class="gallery__btn-holder">
+				<span class="text-mutted gallery__meta-item">Drag to navigate</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="gallery__box-slider js-gallery-logo">
+		@@include('_block--gallery-item.html', {"cardImgLogo": "img/logo-1.png",  "cardImg": "img/blog-card-1.jpg",})
+		@@include('_block--gallery-item.html', {"cardImgLogo": "img/logo-2.png",  "cardImg": "img/blog-card-1.jpg",})
+		@@include('_block--gallery-item.html', {"cardImgLogo": "img/logo-3.png",  "cardImg": "img/blog-card-1.jpg",})
+	</div>
+
+	<div class="container">
+		<div class="gallery__bottom-nav js-gallery-logo-nav block-divider">
+			<div class="gallery-item-bottom-nav"><img src="img/logo-1.png" alt="" class="gallery-item-bottom-nav__img"></div>
+			<div class="gallery-item-bottom-nav"><img src="img/logo-2.png" alt="" class="gallery-item-bottom-nav__img"></div>
+			<div class="gallery-item-bottom-nav"><img src="img/logo-3.png" alt="" class="gallery-item-bottom-nav__img"></div>
+		</div>
+	</div>
+
+</div>

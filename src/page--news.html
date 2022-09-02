@@ -8,11 +8,153 @@
 
 @@include('_block--nav.html')
 
-<div class="header nav-padding">
+<div class="header header--big-word nav-padding detail-holder">
 	<div class="container">
 		
+		<div class="header__hold">
+
+			<h1 class="header__title">NEWS</h1>
+
+			<h2 class="block-title">
+				<span class="block-title__text">featured</span>
+				<span class="block-title__text-line text-line-with-ghost">
+					<span class="text-ghost">news</span>
+					<svg class="text-line">
+						<text x="0" y="80" fill="none">news</text>
+					</svg>
+				</span>
+			</h2>
+			<p class="text-mutted">Vi kan hjælpe dig, uanset om du ønsker at sælge flere produkter, få flere leads eller at blive mere synlig som virksomhed.</p>
+		</div>
+
+		<svg class="detail detail-1 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg>
 	</div> <!-- .container -->
 </div> <!-- .header -->
+
+
+<div class="gallery-under-header blog-list blog-list--offset blog-list--small block-divider">
+	<div class="container">
+		<div class="blog-list__slider js-blog-list">
+
+			@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
+			@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
+			@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.2.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
+			@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
+			@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
+
+		</div>
+	</div>
+</div>
+
+
+<div class="news-header block-divider">
+	<div class="container">
+		<div class="grid">
+			<div class="grid-item grid-item--title">
+				<h2 class="block-title">
+					<span class="block-title__icon">
+						<svg class="text-line">
+							<text x="0" y="35" fill="none">01</text>
+						</svg>
+					</span>
+					<span class="block-title__text">latest</span>
+					<span class="block-title__text-line text-line-with-ghost">
+						<span class="text-ghost">news</span>
+						<svg class="text-line">
+							<text x="0" y="80" fill="none">news</text>
+						</svg>
+					</span>
+				</h2>
+			</div>
+			<div class="news-category grid-item grid-item--text grid-item--bottom-right">
+				<ul class="btn-group">
+					<li class="btn-group__li"><a href="#" class="btn-group__link btn btn-nav-link link-hover active">All</a></li>
+					<li class="btn-group__li"><a href="#" class="btn-group__link btn btn-nav-link link-hover">SEO</a></li>
+					<li class="btn-group__li"><a href="#" class="btn-group__link btn btn-nav-link link-hover">PPC</a></li>
+					<li class="btn-group__li"><a href="#" class="btn-group__link btn btn-nav-link link-hover">Email marketing</a></li>
+					<li class="btn-group__li"><a href="#" class="btn-group__link btn btn-nav-link link-hover">Data & Visualisering</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="news-cards block-divider">
+	<div class="container">
+		<div class="grid grid--3-col">
+			@@include('_block--card-small-news.html', {"cardImg": "img/blog-card-light-0.jpg", "cardTitle": "Official website of Riyadh, Saudi Arabia's capital"})
+			@@include('_block--card-small-news.html', {"cardImg": "img/blog-card-light-1.jpg", "cardTitle": "Official website of Riyadh, Saudi Arabia's capital"})
+			@@include('_block--card-small-news.html', {"cardImg": "img/blog-card-light-2.jpg", "cardTitle": "Official website of Riyadh, Saudi Arabia's capital"})
+			@@include('_block--card-small-news.html', {"cardImg": "img/blog-card-light-3.jpg", "cardTitle": "Official website of Riyadh, Saudi Arabia's capital"})
+			@@include('_block--card-small-news.html', {"cardImg": "img/blog-card-light-4.jpg", "cardTitle": "Official website of Riyadh, Saudi Arabia's capital"})
+			@@include('_block--card-small-news.html', {"cardImg": "img/blog-card-light-5.jpg", "cardTitle": "Official website of Riyadh, Saudi Arabia's capital"})
+			@@include('_block--card-small-news.html', {"cardImg": "img/blog-card-light-6.jpg", "cardTitle": "Official website of Riyadh, Saudi Arabia's capital"})
+			@@include('_block--card-small-news.html', {"cardImg": "img/blog-card-light-0.jpg", "cardTitle": "Official website of Riyadh, Saudi Arabia's capital"})
+			@@include('_block--card-small-news.html', {"cardImg": "img/blog-card-light-1.jpg", "cardTitle": "Official website of Riyadh, Saudi Arabia's capital"})
+		</div>
+		<div class="pagination-hold block-divider">
+			<ul class="pagination d-justify-end">
+				<li class="pagination__li"><a class="pagination__link btn btn-circle btn-circle-sm btn-circle-primary" href="#">1</a></li>
+				<li class="pagination__li"><a class="pagination__link btn btn-circle btn-circle-sm btn-circle-ghost" href="#">2</a></li>
+				<li class="pagination__li"><a class="pagination__link btn btn-circle btn-circle-sm btn-circle-ghost" href="#">3</a></li>
+				<li class="pagination__li"><a class="pagination__link btn btn-circle btn-circle-sm btn-circle-ghost" href="#">4</a></li>
+				<li class="pagination__li"><a class="pagination__link btn btn-circle btn-circle-sm btn-circle-ghost" href="#"><svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+
+@@include('_block--join-team.html')
+
+
+
+
+<div class="preference preference--icons-and-text block-divider">
+	<div class="container">
+		
+		<div class="grid grid--header">
+			<div class="grid-item grid-item--title">
+				<h2 class="block-title">
+					<span class="block-title__icon">
+						<svg class="text-line">
+							<text x="0" y="35" fill="none">02</text>
+						</svg>
+					</span>
+					<span class="block-title__text">vores</span>
+					<span class="block-title__text-line text-line-with-ghost">
+						<span class="text-ghost">services</span>
+						<svg class="text-line">
+							<text x="0" y="80" fill="none">services</text>
+						</svg>
+					</span>
+				</h2>
+			</div>
+			<div class="grid-item grid-item--text grid-item--bottom-right">
+				<a href="#" class="btn btn-light">
+					<span class="btn-text">Contact us</span>
+					<span class="btn-icon">
+						<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+					</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="grid grid--icons-and-text">
+			@@include('_block--icon-near-text.html', {"icon": "icon-abstract-1", "title": "Strategy", "desc": "We identify the business problem and find a sustainable marketing solution."})
+			@@include('_block--icon-near-text.html', {"icon": "icon-abstract-2", "title": "Branding", "desc": "Create and update brands, positioning, logos, and corporate identity."})
+			@@include('_block--icon-near-text.html', {"icon": "icon-abstract-3", "title": "Advertising", "desc": "Create and realize creative advertising campaigns and materials."})
+			@@include('_block--icon-near-text.html', {"icon": "icon-abstract-1", "title": "Media", "desc": "Bring the key message to the brand's audience for the best price."})
+			@@include('_block--icon-near-text.html', {"icon": "icon-abstract-2", "title": "Digital and SMM", "desc": "Develop strategy, ideas, and activations. Maintain social networks."})
+			@@include('_block--icon-near-text.html', {"icon": "icon-abstract-3", "title": "Sites and apps", "desc": "Develop UX/UI design and control technical realization."})
+		</div>
+
+	</div>
+</div>
 
 
 

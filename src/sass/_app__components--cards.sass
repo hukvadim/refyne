@@ -1,39 +1,19 @@
-$bem: '.blog-list'
-.blog-list
-	--card-p-lr: 55px
-	--card-max: 520px
-	.blog-card
-		padding-top: 6.25rem
-	&--inline
-		--card-p-lr: 0
-		.blog-card
-			padding-top: 0
-			margin-bottom: 14.0625rem
-			&:last-child
-				margin-bottom: 0
-	&--small
-		.blog-list__btn-holder
-			&.grid-item
-				text-align: right
-		.blog-card
-			--card-p-lr: 1.25rem
-			padding-top: 3.125rem
-		#{$bem}__slider
-			padding: 3.75rem 0 0
-		#{$bem}__btn
-			--mb: 6.25rem
-			margin-bottom: var(--mb)
-			&-holder
-				--fz-as: flex-end
-				text-align: right
-	.gallery-item-btn
-		position: absolute
-		top: 3.75rem
-		right: 21.3%
-		z-index: 9
+.pagination
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	list-style-type: none
+	margin: 0 -0.9375rem
+	padding: 0
+	&__li
+		margin: 0 0.9375rem
+		padding: 0
+		&::before
+			display: none
+	&__link
+		--fz: 1.125rem
 		.icon
-			--sz: 1.25rem
-
+			--sz: 1.0625rem
 
 
 $bem: '.blog-card'
@@ -41,11 +21,12 @@ $bem: '.blog-card'
 	padding-left: var(--card-p-lr)
 	padding-right: var(--card-p-lr)
 	max-width: var(--card-max)
+	text-align: left
 	&:hover
 		#{$bem}__img
 			transform: rotate(5deg) 
 	&__img-hold
-		--mb: 2.125rem
+		--mb: 2.5rem
 		margin-bottom: var(--mb)
 		display: block
 	&__img
@@ -113,8 +94,16 @@ $bem: '.blog-card'
 		#{$bem}__text-hold
 			padding-right: 4.375rem
 	&--small
-		max-width: 31.875rem
+		max-width: 36.625rem
 		#{$bem}__title
+		#{$bem}__img-hold
+			--mb: 2rem
+		#{$bem}__text-hold
+			padding-left: 1.25rem
+	&--light
+		margin-bottom: 3.875rem
+		#{$bem}__title
+			--fz: 1.25rem
 		#{$bem}__img-hold
 			--mb: 1.625rem
 		#{$bem}__text-hold
@@ -122,14 +111,107 @@ $bem: '.blog-card'
 	&--gray
 		background-color: var(--gray-light)
 		padding: 2.375rem 2.5rem
+		min-height: 21.5625rem
 		#{$bem}__category
+			--mb: 1.375rem
 			color: var(--gray-light2)
 			font-size: 1.25rem
 		#{$bem}__title
 			font-size: 2.5rem
 		#{$bem}__tag-list
 			font-size: 1.125rem
+			line-height: 1.52
 	&--ghost
 		background-color: transparent
 		padding: 0
+
+
+
+$bem: '.blog-list'
+.blog-list
+	--card-p-lr: 3.125rem
+	--card-max: 30rem
+	.gallery-item-btn
+		--t: 3.75rem
+		--r: 38.5%
+		--l: initial
+		position: absolute
+		top: var(--t)
+		right: var(--r)
+		left: var(--l)
+		z-index: 9
+		.icon
+			--sz: 1.25rem
+	& &__slider
+		.blog-card
+			padding-top: 6.25rem
+	& &__hold
+		&--inline
+			--card-max: 100%
+			padding: 6.25rem 0 0
+		&--gray-cards
+			&.grid
+				--fxw: wrap
+				.grid-item
+					--card-width: 50%
+					margin-bottom: 2.5rem
+	&--no-btn-next
+		.gallery-item-btn
+			display: none !important
+	&--offset-reverse,
+	&--offset
+		--offset-padding: 2.5rem
+		--offset-minus-margin: -2.5rem
+		--offset-next-slide-position: 38.5%
+		overflow: hidden
+		#{$bem}__slider
+			--w: 150%
+			width: var(--w)
+			margin-left: var(--offset-minus-margin)
+		.blog-card
+			--card-p-lr: var(--offset-padding)
+			&--default
+		.gallery-item-btn
+			--r: var(--offset-next-slide-position)
+	&--offset-reverse
+		#{$bem}__slider
+			margin-right: var(--offset-minus-margin)
+			margin-left: -50%
+			.blog-card
+				&__category
+					justify-content: flex-end
+	&--default
+		--card-max: 500px
+		--offset-padding: 50px
+		--offset-minus-margin: -50px
+		--offset-next-slide-position: 38.5%
+		.gallery-item-btn
+			--r: initial
+			--l: 22%
+	&--inline
+		--card-p-lr: 0
+		.blog-card
+			padding-top: 0
+			margin-bottom: 14.0625rem
+			&:last-child
+				margin-bottom: 0
+	&--small
+		.blog-list__btn-holder
+			&.grid-item
+				text-align: right
+		.blog-card
+			--card-p-lr: 2.5rem
+		#{$bem}__slider
+			padding: 3.75rem 0 0
+			.blog-card
+				padding-top: 3.125rem
+		#{$bem}__btn
+			--mb: 6.25rem
+			margin-bottom: var(--mb)
+			&-holder
+				--fz-as: flex-end
+				text-align: right
+	&--gray-cards
+	
+
 

@@ -1,0 +1,41 @@
+<div class="@@if (context.cssClass) {@@cssClass }block-blog-list blog-list blog-list--offset blog-list--small block-divider">
+	<div class="container">
+		<div class="blog-list__box grid">
+			<div class="grid-item grid-item--title">
+				<h2 class="block-title">
+					<span class="block-title__icon">
+						<svg class="text-line">
+							<text x="0" y="35" fill="none">@@if (context.titleNum) { @@titleNum }@@if (!context.titleNum) { 01 }</text>
+						</svg>
+					</span>
+					<span class="block-title__text">featured</span>
+					<span class="block-title__text-line text-line-with-ghost">
+						<span class="text-ghost">news</span>
+						<svg class="text-line">
+							<text x="0" y="80" fill="none">news</text>
+						</svg>
+					</span>
+				</h2>
+				<p class="text-mutted">Vi kan hjælpe dig, uanset om du ønsker at sælge flere produkter, få flere leads eller at blive mere synlig som virksomhed.</p>
+			</div>
+			<div class="grid-item grid-item--text grid-item--bottom-right">
+				<a href="#" class="blog-list__btn btn btn-light">
+					<span class="btn-text">EXPLORE</span>
+					<span class="btn-icon">
+						<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+					</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="blog-list__slider js-blog-list">
+
+			@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
+			@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
+			@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.2.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
+			@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
+			@@include('_block--card-small.html', {"cardImg": "img/blog-card-3.3.jpg",  "cardCategory": "Riyadh",  "cardTitle": "Official website of Riyadh, Saudi Arabia's capital",  "cardTags": "design, development, product"})
+
+		</div>
+	</div>
+</div>

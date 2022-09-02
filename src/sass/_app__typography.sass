@@ -58,7 +58,7 @@ ul, ol
 			&--text
 				--card-max: 26.25rem
 			&--social
-				--mb: 1.25rem
+				--mb: 0
 		.block-title
 			--fz: 3.5rem
 			--fz-ghost: 3.5rem
@@ -67,10 +67,12 @@ ul, ol
 
 
 .typography
+	--fz: var(--base-fz)
+	--typo-elm-mt: 2.4rem
+	--typo-elm-mb: 2.4rem
+	font-size: var(--fz)
 	color: var(--typo-elm-c)
 	line-height: var(--typo-elm-lh)
-	--typo-elm-mt: 2rem
-	--typo-elm-mb: 2rem
 
 	a
 		&:hover
@@ -127,6 +129,5 @@ ul, ol
 		margin-left: auto
 		margin-right: auto
 		li
-			margin-top: 0.25rem
-			margin-bottom: 0.25rem
-		
+			--typo-elm-mt: 0.25rem
+			--typo-elm-mb: 0.25rem

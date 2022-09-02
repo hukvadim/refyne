@@ -117,6 +117,8 @@ a
 
 .d-justify-between
 	justify-content: space-between
+.d-justify-end
+	justify-content: flex-end
 
 .d-flex-center
 	display: flex
@@ -125,6 +127,12 @@ a
 
 .tt-uppercase
 	text-transform: uppercase
+
+.list-unstyled
+	list-style-type: none
+	li
+		&::before
+			display: none
 
 .animate::before,
 .animate::after,
@@ -179,14 +187,6 @@ $fwList: 300 400 500 600 700
 	.fw-#{$fontWeight}
 		font-weight: $fontWeight
 
-$fzList: 14px 16px 18px
-@each $fontSize in $fzList
-	.fz-#{$fontSize}
-		font-size: $fontSize
-
-.mb-20
-	margin-bottom: 20px
-
 .block-divider
 	--p: 0
 	--m: 0
@@ -198,7 +198,8 @@ $fzList: 14px 16px 18px
 
 .text-mutted
 	--max-w: initial
-	font-size: 1rem
+	--fz: var(--base-fz)
+	font-size: var(--fz)
 	color: var(--gray)
 	padding-top: var(--typo-elm-pt)
 	padding-bottom: var(--typo-elm-pb)
@@ -262,10 +263,25 @@ $fzList: 14px 16px 18px
 		max-width: var(--card-max)
 		align-self: var(--fz-as)
 		justify-self: var(--fz-js)
+		&--center
+			--fz-as: center
+		&--center-right
+			--fz-as: center
+			text-align: right
+		&--bottom-left
+			--fz-as: flex-end
+			--mb: 0
+			margin-bottom: var(--mb)
 		&--bottom-right
 			--fz-as: flex-end
 			--mb: 0
 			margin-bottom: var(--mb)
+			text-align: right
+	&--3-col
+		--fxw: wrap
+		--card-max: 33.2%
+		.grid-item
+
 
 
 .detail
@@ -333,3 +349,25 @@ $fzList: 14px 16px 18px
 		--b: -15.625rem
 		--l: -31.625rem
 		--sz: 35.625rem
+
+
+
+.link-hover
+	position: relative
+	--border-c: var(--bl)
+	--border-c-h: var(--pr)
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 0
+		height: 0
+		border-bottom: 0.125rem solid var(--border-c)
+		transition: width .25s
+	&.active,
+	&:hover
+		&::before
+			left: 0
+			width: 100%
+			border-bottom-color: var(--border-c-h)

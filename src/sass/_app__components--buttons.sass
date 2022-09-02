@@ -2,6 +2,7 @@
 	--h: 2.5rem
 	--fz: 1.0625rem
 	--fw: 600
+	--fs: inherit
 	--c: var(--pr)
 	--c-h: var(--pr)
 	--t-style: uppercase
@@ -9,8 +10,9 @@
 	--flex-ai: center
 	color: var(--c)
 	font-size: var(--fz)
-	min-height: var(--h)
 	font-weight: var(--fw)
+	font-style: var(--fs)
+	min-height: var(--h)
 	line-height: 1
 	text-transform: var(--t-style)
 	display: inline-flex
@@ -49,6 +51,7 @@
 		--bg-color: var(--bl)
 		--bg-color-h: var(--bl)
 		--c: var(--wh)
+		--c-h: var(--wh)
 		--flex-jc: center
 		--flex-ai: center
 		width: var(--sz)
@@ -58,7 +61,6 @@
 		border-radius: 50%
 		&:hover
 			background-color: var(--bg-color-h)
-			color: var(--wh)
 		&-sm
 			--sz: 2.5rem
 			.icon
@@ -67,3 +69,44 @@
 			--bg-color: var(--pr)
 			--bg-color-h: var(--pr)
 			--c: var(--wh)
+		&-ghost
+			--bg-color: transparent
+			--bg-color-h: var(--gray-light)
+			--c: var(--bl)
+			--c-h: var(--pr)
+			--fw: 600
+	&-nav-link
+		--c: var(--gray)
+		--t-style: inherit
+		--fw: 400
+		letter-spacing: 0
+		&.active
+			--c: var(--bl)
+			--c-h: var(--bl)
+			--fs: italic
+			--fw: 600
+
+
+
+
+.btn-group
+	list-style-type: none
+	display: inline-flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: flex-start
+	align-items: center
+	margin-left: -1.25rem
+	margin-right: -1.25rem
+	&__li
+		margin: 0
+		padding: 0 1.25rem
+		&::before
+			display: none
+	&__link
+		--fz: 1.25rem
+		display: flex
+		min-height: 3.375rem
+		align-items: center
+		justify-content: center
+		flex-wrap: wrap
