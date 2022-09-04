@@ -63,6 +63,24 @@ svg
 	width: var(--w)
 	height: var(--h)
 
+	&.icon-hero-element
+		--sz: var(--img-hero-sz)
+
+.hero-element-hold
+	--t : initial
+	--b : initial
+	--r : initial
+	--l : initial
+	position: relative
+	.icon-hero-element
+		position: absolute
+		top: var(--t)
+		bottom: var(--b)
+		right: var(--r)
+		left: var(--l)
+
+
+
 a,
 button,
 .cur-p,
@@ -94,6 +112,9 @@ a
 	&:hover
 		color: var(--pr-h)
 		text-decoration: none
+
+.img
+	width: 100%
 
 .ov-hidden
 	overflow: hidden
@@ -187,6 +208,18 @@ $fwList: 300 400 500 600 700
 	.fw-#{$fontWeight}
 		font-weight: $fontWeight
 
+.fz-var-16
+	--base-fz: 1rem
+	font-size: var(--base-fz)
+.fz-var-18
+	--base-fz: 1.125rem
+	font-size: var(--base-fz)
+.fz-var-20
+	--base-fz: 1.25rem
+	font-size: var(--base-fz)
+
+.main-blocks-divider-p,
+.main-blocks-divider-m,
 .block-divider
 	--p: 0
 	--m: 0
@@ -194,6 +227,14 @@ $fwList: 300 400 500 600 700
 	padding: var(--p)
 	position: relative
 	z-index: 5
+
+.main-blocks-divider
+	&-p
+		--p: 16.875rem 0
+	&-m
+		--m: 16.875rem 0
+
+
 
 
 .text-mutted
@@ -206,6 +247,12 @@ $fwList: 300 400 500 600 700
 	margin-top: var(--typo-elm-mt)
 	margin-bottom: var(--typo-elm-mb)
 	max-width: var(--max-w)
+	&--light
+		color: var(--gray-light2)
+	&-max
+		--max-w: 33.125rem
+		.text-mutted
+			--max-w: 33.125rem
 
 
 .list
@@ -236,9 +283,7 @@ $fwList: 300 400 500 600 700
 		&:hover
 			color: var(--link-h-c)
 
-// .list-nav
-// 	--p: 0
-// 	--m: 0
+
 
 
 .grid
@@ -263,20 +308,33 @@ $fwList: 300 400 500 600 700
 		max-width: var(--card-max)
 		align-self: var(--fz-as)
 		justify-self: var(--fz-js)
+		position: relative
 		&--center
 			--fz-as: center
 		&--center-right
 			--fz-as: center
 			text-align: right
+			&-flex
+				--fz-as: center
+				display: flex
+				flex-direction: column
+				align-items: flex-end
 		&--bottom-left
 			--fz-as: flex-end
 			--mb: 0
 			margin-bottom: var(--mb)
 		&--bottom-right
 			--fz-as: flex-end
-			--mb: 0
+			--mb: 2.625rem
 			margin-bottom: var(--mb)
 			text-align: right
+			.text-mutted:last-child
+				--typo-elm-mb: 0.3125rem
+		&--text-max
+			--fz-as: center
+			max-width: 31.875rem
+		&--offset-r-100
+			right: -6.25rem
 	&--3-col
 		--fxw: wrap
 		--card-max: 33.2%
@@ -341,14 +399,13 @@ $fwList: 300 400 500 600 700
 
 
 .detail-holder
+	overflow: hidden
 	.detail-1
 		--t: -6.5rem
 		--r: -27.5rem
-		--sz: 29.8125rem
 	.detail-2
 		--b: -15.625rem
 		--l: -31.625rem
-		--sz: 35.625rem
 
 
 

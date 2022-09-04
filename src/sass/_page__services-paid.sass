@@ -2,10 +2,7 @@
 
 	$bem: '.header'
 	.header
-		#{$bem} &__text-wrap
-			--p: 1.25rem 0 2.8125rem
-			.grid-item
-				max-width: 33.75rem
+		
 
 	$bem: '.gallery-images'
 	.gallery-images
@@ -16,12 +13,11 @@
 				&::after
 					--offset-box-after-c: var(--base-bg)
 
-	.partners
-		--p: 12.5rem 0 0
-
-
+	$bem: '.preference'
 	.preference
 		--p: 7.1875rem 0 17.5rem
+		#{$bem}__header
+			--p: 6.95rem 0 6.875rem
 
 	.services-blog-list.blog-list
 		--p: 19.25rem 0 0

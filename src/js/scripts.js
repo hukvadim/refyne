@@ -53,3 +53,45 @@ $('.js-gallery').slick({
 	dots: false,
 	arrows: false
 });
+
+
+$('.js-gallery-simple').slick({
+	infinite: false,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	dots: false,
+	arrows: true,
+	nextArrow: '<div class="gallery-item-btn btn btn-circle"><svg class="icon icon-arrows"><use xlink:href="#icon-arrows"></use></svg></div>',
+});
+
+
+$('.js-gallery-our-team').slick({
+	infinite: false,
+	slidesToShow: 2,
+	slidesToScroll: 1,
+	dots: false,
+	arrows: true,
+	nextArrow: '<div class="gallery-item-btn btn btn-circle"><svg class="icon icon-arrows"><use xlink:href="#icon-arrows"></use></svg></div>',
+});
+
+
+
+
+
+
+// $('.js-masonry-grid').masonry({
+// 	itemSelector: '.js-masonry-item'
+// });
+
+$(".js-masonry-grid").justifiedGallery({
+	rowHeight: 500,
+	margins: 40,
+	border: 0,
+	lastRow: 'center',
+	// randomize: true,
+});
+
+
+
+
+

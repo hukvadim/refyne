@@ -8,7 +8,7 @@
 	margin-left: auto
 	position: relative
 	&-fluid
-		--w: 100%
+		--w: 1920px
 		--p: 80px
 
 
@@ -37,6 +37,7 @@
 				top: 0
 				left: 100vw
 				letter-spacing: 0.2375rem
+				fill: none
 
 @keyframes runningText
 	0%
@@ -46,7 +47,7 @@
 
 
 .text-line
-	--w: 100%
+	--w: 102%
 	--h: 100%
 	--color: #000000
 	--border: 2px
@@ -54,7 +55,7 @@
 	--fz: 8.75rem
 	width: var(--w)
 	height: var(--h)
-	stroke: var(--color) 
+	stroke: var(--color)
 	stroke-width: var(--border)
 	font-weight: var(--fw)
 	font-size: var(--fz)
@@ -99,11 +100,21 @@
 
 
 .header-slide
-	--pt: 9.125rem
+	--pt: 2.625rem
+	--max-w: 80%
 	padding-top: var(--pt)
+	max-width: var(--max-w)
+	&--70
+		--max-w: 70%
+	&--60
+		--max-w: 60%
+	&--else
+		--pt: 9.125rem
 	& &__meta
 		--typo-elm-mt: 0
 		--typo-elm-mb: 0
+		&--xl
+			--base-fz: 1.25rem
 		&-el
 			font-size: 1.25rem
 			margin-right: 2.1875rem
@@ -126,6 +137,11 @@
 		position: relative
 		z-index: 9
 		mix-blend-mode: difference
+	& &__text
+		--fz: 1.125rem
+		--max-w: 32.1875rem
+		--typo-elm-mt: 1.5rem
+		--typo-elm-mb: 1.4375rem
 	& &__btn
 	& &__gallery-holder
 		--t: 1.875rem
@@ -134,12 +150,12 @@
 		top: var(--t)
 		right: var(--r)
 		.gallery-slide
+			--offset-box: -1.5625rem
 	& &__detail
-		--w: 9rem
-		--h: 9rem
 		position: absolute
 		bottom: -3.875rem
 		right: -4.5rem
+		z-index: 9
 
 
 
@@ -158,7 +174,8 @@ $bem: '.header'
 		font-size: var(--fz)
 		margin-left: -0.375rem
 	&-slide
-		max-width: 80%
+		& &__btn
+			margin-top: 1.5625rem
 	&--big-text
 		#{$bem}__meta
 			--typo-elm-mb: 0
@@ -180,8 +197,6 @@ $bem: '.header'
 			position: absolute
 			top: 1rem
 			right: -3.5rem
-			width: var(--img-hero-sz)
-			height: var(--img-hero-sz)
 		.detail-1
 			--sz: 40.625rem
 			--t: -36.25rem
@@ -192,7 +207,7 @@ $bem: '.header'
 				--pt: 5.125rem
 				max-width: 60%
 				&__meta
-					
+
 				&__title
 					--mb: 3.375rem
 					--fz: 6.875rem
@@ -245,6 +260,8 @@ $bem: '.block-title'
 	align-items: flex-start
 	margin-top: var(--typo-elm-mt)
 	margin-bottom: var(--typo-elm-mb)
+	.text-line
+		fill: none
 	& &__icon
 		line-height: 1
 		margin-bottom: 0.625rem
@@ -263,6 +280,8 @@ $bem: '.block-title'
 			margin-top: var(--mt)
 			margin-left: var(--mb)
 			letter-spacing: -0.0625rem
+			.text-ghost
+				white-space: nowrap
 			.text-line
 				--border: 0.0625rem
 	&--sm
@@ -273,17 +292,6 @@ $bem: '.block-title'
 			&-line
 				--fz-ghost: var(--fz)
 				--mt: 1.125rem
-
-
-
-.title-cols
-	.block-title-wrap
-		.block-title
-			--typo-elm-mt: 0 
-			--typo-elm-mb: 3.75rem
-	.block-text-wrap
-		.text-mutted
-			
 
 
 .user-img-text
@@ -311,18 +319,6 @@ $bem: '.block-title'
 
 
 
-.partners
-	& &__box
-		justify-content: space-between
-	& &__text
-	& &__btn-holder
-		--mb: 2.625rem
-		align-self: flex-end
-		margin-bottom: var(--mb)
-
-
-
-
 .services
 	& &__wrapper
 		margin-top: 11.625rem
@@ -340,14 +336,18 @@ $bem: '.block-title'
 
 $bem: '.quotation'
 .quotation
+	--quote-fz-text: 2.5rem
+	--quote-box-ml: 10.25rem
+	--quote-m: 0 0 1.5rem 10.5rem
 	background-color: var(--gray-light)
 	min-height: 1080px
+	overflow: hidden
 	.container
 		padding-top: 15rem
 	& &__box
 		position: relative
 		padding: 8.4375rem 0 0
-		margin-left: 10.25rem
+		margin-left: var(--quote-box-ml)
 		.icon-quote
 			--w: 7.875rem
 			--h: 7.875rem
@@ -356,15 +356,13 @@ $bem: '.quotation'
 			left: 0
 			color: var(--pr)
 		.icon-hero-element
-			--w: var(--img-hero-sz)
-			--h: var(--img-hero-sz)
 			position: absolute
 			bottom: -7.1875rem
 			right: -7.8125rem
 	& &__quote
-		margin: 0 0 1.5rem 10.5rem
+		margin: var(--quote-m)
 		&-text
-			font-size: 2.5rem
+			font-size: var(--quote-fz-text)
 			font-weight: 600
 			margin: 0
 	& &__caption
@@ -393,18 +391,47 @@ $bem: '.quotation'
 	&--ghost
 		background-color: transparent
 		min-height: initial
-		#{$bem}__box
-			margin-left: 0
+		--quote-fz-text: 1.5rem
+		--quote-box-ml: 0
+		--quote-m: 1.75rem 0 1.5rem 7rem
 		#{$bem}__quote
-			margin: 1.75rem 0 1.5rem 7rem
 			&-text
-				font-size: 1.5rem
 				max-width: 60rem
 				line-height: 1.5
+	&--sm
+		--quote-fz-text: 2rem
+		--quote-m: 0 0 0 10.75rem
 
 
 
 
+
+
+.gallery-simple
+	overflow: hidden
+	& &__wrap
+		background-color: var(--gray-light)
+		padding-bottom: 29.25rem
+	& &__header
+		--p: 130px 0 7.5rem
+	& &__slider
+		margin-top: -29.25rem
+		position: relative
+		margin-left: -3.125rem
+		max-width: 980px
+		.slick-prev
+			display: none !important
+		.gallery-item-btn
+			position: absolute
+			top: -10.625rem
+			right: 24%
+			z-index: 9
+		.slick-list
+			overflow: initial
+	& &__item
+		padding: 0 3.125rem
+	& &__img
+		width: 100%
 
 
 
@@ -519,6 +546,18 @@ $bem: '.quotation'
 		width: 100%
 
 
+.gallery-masonry
+	& &__box-header
+		--p: 0 0 10.125rem
+	& &__box-images
+		overflow: hidden
+		&.container-fluid
+			--p: 0
+	& &__img
+		&-hold
+			display: inline-block
+		&-masonry
+
 
 
 
@@ -588,13 +627,13 @@ $bem: '.icon-near-text'
 	align-items: flex-start
 	&__icon
 		--m: 0 2.375rem 0 0
-		margin: var(--m) 
+		margin: var(--m)
 		.icon
 			--s: 3.125rem
 			width: var(--s)
 			height: var(--s)
 	&__wrap
-	
+
 	&__title
 		--fz: 1.5rem
 		--fw: 600
@@ -632,8 +671,12 @@ $bem: '.icon-near-text'
 
 
 
+
+
 $bem: '.preference'
 .preference
+	&__header
+		--p: 8.75rem 0 6.875rem
 	& &__box-wrap-1
 		--p: 0 0 10.625rem
 		.animation-graph-container
@@ -691,8 +734,9 @@ $bem: '.preference'
 
 
 .other-jobs
+	& &__header
+		padding-bottom: 8.875rem
 	.block-title
-		--typo-elm-mb: 8.875rem
 	.blog-list__hold.grid
 		.grid-item
 			margin-top: -11.5625rem
@@ -704,3 +748,147 @@ $bem: '.preference'
 				margin-top: 11.5625rem
 
 
+
+$bem: '.interesting-text'
+.interesting-text
+	--p: 0 0 18.75rem
+	& &__header
+		--p: 0 0 2.8125rem
+	& &__box
+		--p: 8.625rem 0 0
+		&:first-child
+			--p: 0 0 0
+		&-hold
+		.hero-element-hold
+			--b: -4rem
+			--l: -4.375rem
+		.text-mutted
+			--fz: 1.125rem
+			--lh: 1.52
+			--typo-elm-mb: 1.5625rem
+		.grid-item
+			position: relative
+			&--img-hold
+				right: 12.375rem
+			&--content
+				--fz-as: center
+				max-width: 35rem
+				~ .grid-item--img-hold
+					right: -13rem
+		.box-1
+		.box-2
+	.detail
+		&-1
+			--t: 33.5rem
+		&-2
+			--b: 12.375rem
+			--l: -31.625rem
+
+
+
+
+
+.news-category
+	--mb: 1.5625rem
+	margin-right: -3.25rem
+
+.news-cards
+	--m: 12.375rem 0 12.5rem
+
+
+
+
+
+.busines-solution
+	& &__header
+		--p: 0 0 4.6875rem
+		.grid-item
+			&--text
+				.text-mutted
+					--fz: 1.25rem
+	& &__grid
+		--fxw: wrap
+	& &__item
+		text-align: center
+		width: 25%
+		height: 10rem
+	& &__logo
+		max-width: 12.5rem
+		max-height: 2.5rem
+
+
+
+
+
+$bem: '.team-user'
+.team-user
+	position: relative
+	padding: 2.5rem 95px 6.5rem
+	min-height: 47.5rem
+	max-width: 43.75rem
+	&:hover
+		#{$bem}__img
+			transform: rotate(1.8deg)
+		#{$bem}__data-hold
+			opacity: 1
+	&__img
+		width: 100%
+		transition: transform 0.5s
+		&-hold
+	&__data-hold
+		background-color: var(--bl)
+		padding: 2.625rem 2.5rem
+		color: var(--wh)
+		max-width: 25rem
+		position: absolute
+		bottom: 0
+		right: 0
+		opacity: 0
+		transition: transform 0.4s, opacity .25s ease-in-out
+	&__name
+		--typo-elm-mt: 0
+		--typo-elm-mb: 15px
+		font-size: 1.25rem
+		font-weight: 400
+	&__post
+		--typo-elm-mt: 0
+		font-size: 1rem
+		font-weight: 400
+		color: var(--gray-light2)
+		text-transform: uppercase
+
+	&__social
+		margin: -0.5625rem 0 0.625rem -0.9375rem
+		&-link
+			color: var(--wh)
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			width: 2.8125rem
+			height: 2.8125rem
+			margin: 0.3125rem
+			.icon
+				--sz: 1.25rem
+	&__desc
+		margin: 0
+		font-size: 1rem
+		font-weight: 400
+		color: var(--gray-light2)
+
+
+.our-team
+	overflow: hidden
+	& &__header
+		--p: 0 0 4.625rem
+	& &__slider
+		margin-left: -5.625rem
+		padding-bottom: 2.625rem
+		position: relative
+		.slick-prev
+			display: none !important
+		.gallery-item-btn
+			position: absolute
+			top: 30%
+			right: 10%
+		.slick-list
+			overflow: initial

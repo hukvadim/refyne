@@ -11,20 +11,22 @@
 <div class="header nav-padding">
 	<div class="container">
 
-		<div class="header-slide">
-			<p class="header-slide__meta text-mutted">Refyne Agency</p>
-			<h2 class="header-slide__title">We integrate strategy, <span class="italic fw-700">creativity</span> to build brands</h2>
-			<a href="#" class="header-slide__btn btn btn-light block-divider">
-				<span class="btn-text">Contact us</span>
-				<span class="btn-icon btn-icon--fill">
-					<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
-				</span>
-			</a>
-			<div class="header-slide__gallery-holder">
-				<div class="gallery-slide">
-					<img src="img/header-slide.jpg" alt="" class="gallery-slide-img">
+		<div class="header__hold">
+			<div class="header-slide">
+				<p class="header-slide__meta text-mutted">Refyne Agency</p>
+				<h2 class="header-slide__title">We integrate strategy, <span class="italic fw-700">creativity</span> to build brands</h2>
+				<a href="#" class="header-slide__btn btn btn-light block-divider">
+					<span class="btn-text">Contact us</span>
+					<span class="btn-icon btn-icon--fill">
+						<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+					</span>
+				</a>
+				<div class="header-slide__gallery-holder">
+					<div class="gallery-slide">
+						<img src="img/header-slide.jpg" alt="" class="gallery-slide-img">
+					</div>
+					<svg class="header-slide__detail icon icon-hero-element rotate"><use xlink:href="#icon-hero-element"></use></svg>
 				</div>
-				<svg class="header-slide__detail icon icon-hero-element rotate"><use xlink:href="#icon-hero-element"></use></svg>
 			</div>
 		</div>
 
@@ -36,34 +38,35 @@
 	<span class="running-line__box running-line__box--transparent" style="--time: 22s;">
 		Transparens styrker tillid – en fundamental faktor i et godt partnerskab.
 		<svg class="text-line">
-			<text x="0" y="135" fill="none">Transparens styrker tillid – en fundamental faktor i et godt partnerskab.</text>
+			<text x="0" y="135">Transparens styrker tillid – en fundamental faktor i et godt partnerskab.</text>
 		</svg>
 	</span>
 </div>
 
 
-<div class="partners block-divider">
+
+<div class="preference block-divider">
 	<div class="container">
-		
-		<div class="partners__box d-flex">
-			<div class="partners__text">
+
+		<div class="preference__header grid block-divider">
+			<div class="grid-item grid-item--title">
 				<h2 class="block-title">
 					<span class="block-title__icon">
 						<svg class="text-line">
-							<text x="0" y="35" fill="none">01</text>
+							<text x="0" y="35">01</text>
 						</svg>
 					</span>
 					<span class="block-title__text">succesfulde</span>
 					<span class="block-title__text-line text-line-with-ghost">
 						<span class="text-ghost">partnerskaber</span>
 						<svg class="text-line">
-							<text x="0" y="80" fill="none">partnerskaber</text>
+							<text x="0" y="80">partnerskaber</text>
 						</svg>
 					</span>
 				</h2>
 			</div>
-			<div class="partners__btn-holder">
-				<a href="#" class="partners__btn btn btn-light mb-20">
+			<div class="grid-item grid-item--text grid-item--bottom-right">
+				<a href="#" class="preference__btn btn btn-light">
 					<span class="btn-text">How we works</span>
 					<span class="btn-icon">
 						<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
@@ -71,14 +74,8 @@
 				</a>
 			</div>
 		</div>
-	</div>
-</div>
 
-
-<div class="preference block-divider">
-	<div class="container">
-
-		<div class="grid">
+		<div class="preference__content grid">
 			<div class="icon-near-text grid-item">
 				<div class="icon-near-text__icon">
 					<svg class="icon icon-abstract-1"><use xlink:href="#icon-abstract-1"></use></svg>
@@ -118,14 +115,14 @@
 		<h2 class="block-title">
 			<span class="block-title__icon">
 				<svg class="text-line">
-					<text x="0" y="35" fill="none">02</text>
+					<text x="0" y="35">02</text>
 				</svg>
 			</span>
 			<span class="block-title__text">vores</span>
 			<span class="block-title__text-line text-line-with-ghost">
 				<span class="text-ghost">partnerskaber</span>
 				<svg class="text-line">
-					<text x="0" y="80" fill="none">partnerskaber</text>
+					<text x="0" y="80">partnerskaber</text>
 				</svg>
 			</span>
 		</h2>
@@ -153,25 +150,8 @@
 
 
 
-<div class="quotation ov-hidden">
-	<div class="container">
 
-		<figure class="quotation__box">
-			<svg class="icon icon-quote"><use xlink:href="#icon-quote"></use></svg>
-			<svg class="icon icon-hero-element rotate"><use xlink:href="#icon-hero-element"></use></svg>
-			<blockquote class="quotation__quote">
-				<p class="quotation__quote-text">Hos Refyne er vi klar over, at SEM kan være en altafgørende del af din forretning. Tilstedeværelse med det rette budskab til den rigtige bruger kan være det, som afgør, om brugeren vælger lige netop din virksomhed.</p>
-			</blockquote>
-			<figcaption class="quotation__caption">
-				<span class="quotation__caption-top">Kasper Brandt</span>
-				<span class="quotation__caption-bottom">Brave New World</span>
-			</figcaption>
-		</figure>
-
-		<svg class="detail detail-1 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg>
-		<svg class="detail detail-2 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg>
-	</div>
-</div>
+@@include('_block--quotation.html')
 
 
 
