@@ -9,13 +9,24 @@
 
 	.news-header
 		--p: 18.75rem 0 0
+		+xl
+			padding: 13.75rem 0 0
+		+lg
+			padding: 9.75rem 0 0
 		.grid-item
 			&--title
 				--card-width: 30%
-				--card-min: 31.25rem
+				--card-min: initial
+				+xxl
+					--card-width: 25%
+					--card-min: initial
 			&--text
-				--card-width: 70%
+				--card-width: 75%
 				--card-min: 46.875rem
+				+xxl
+					--card-min: 40.875rem
+				+md
+					min-width: initial
 		.news-category
 
 		.pagination-hold
@@ -32,3 +43,5 @@
 
 	.preference
 		--p: 17rem 0 14.375rem
+		+xl
+			padding: 9rem 0 8.375rem

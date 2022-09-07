@@ -5,9 +5,15 @@
 	list-style-type: none
 	margin: 0 -0.9375rem
 	padding: 0
+	+sm
+		padding-right: 1.25rem
+	&-hold
+		overflow: hidden
 	&__li
 		margin: 0 0.9375rem
 		padding: 0
+		+sm
+			margin: 0 0.75rem
 		&::before
 			display: none
 	&__link
@@ -82,6 +88,8 @@ $bem: '.blog-card'
 		#{$bem}__img-hold
 			margin-bottom: 0
 			min-width: 31.875rem
+			+xxl
+				min-width: 28rem
 		#{$bem}__category
 			--fz: 1.25rem
 			--p: 1.5rem
@@ -121,6 +129,18 @@ $bem: '.blog-card'
 		#{$bem}__tag-list
 			font-size: 1.125rem
 			line-height: 1.52
+		#{$bem}__btn
+			&-hidden
+				display: flex
+				justify-content: space-between
+				padding: 1rem 0 0.3125rem
+				opacity: 0
+				transition: .25s
+			&-btn
+		&:hover
+			#{$bem}__btn-hidden
+				opacity: 1
+
 	&--ghost
 		background-color: transparent
 		padding: 0
@@ -140,6 +160,8 @@ $bem: '.blog-list'
 		right: var(--r)
 		left: var(--l)
 		z-index: 9
+		+sm
+			display: none
 		.icon
 			--sz: 1.25rem
 	& &__slider
@@ -193,6 +215,30 @@ $bem: '.blog-list'
 		.blog-card
 			padding-top: 0
 			margin-bottom: 14.0625rem
+			+md
+				flex-direction: column
+				max-width: 23.4375rem
+				margin-left: auto
+				margin-right: auto
+				margin-bottom: 6rem
+			&__category
+				--fz: 1rem
+			&__title
+				+lg
+					font-size: 2rem
+				+md
+					font-size: 1.625rem
+			&__img-hold
+				min-width: 22.5rem
+				+lg
+					min-width: 16.5rem
+				+md
+					margin-bottom: 2.5rem
+			&__text-hold
+				+lg
+					padding-right: 3.375rem
+				+md
+					padding-right: 0
 			&:last-child
 				margin-bottom: 0
 	&--small
@@ -201,13 +247,25 @@ $bem: '.blog-list'
 				text-align: right
 		.blog-card
 			--card-p-lr: 2.5rem
+			&__title
+				+sm
+					font-size: 1.25rem
 		#{$bem}__slider
 			padding: 3.75rem 0 0
+			+sm
+				width: 110%
+				margin-left: -0.625rem
+				margin-right: -0.625rem
 			.blog-card
 				padding-top: 3.125rem
+				+sm
+					padding-left: 10px
+					padding-right: 10px
 		#{$bem}__btn
 			--mb: 6.25rem
 			margin-bottom: var(--mb)
+			+lg
+				margin-bottom: 0
 			&-holder
 				--fz-as: flex-end
 				text-align: right

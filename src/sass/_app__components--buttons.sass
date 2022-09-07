@@ -15,10 +15,12 @@
 	min-height: var(--h)
 	line-height: 1
 	text-transform: var(--t-style)
-	display: inline-flex
+	display: inline-flex !important
 	justify-content: var(--flex-jc)
 	align-items: var(--flex-ai)
 	letter-spacing: 0.053125rem
+	+md
+		font-size: 1rem
 	&:hover
 		color: var(--c-h)
 	&-icon
@@ -28,6 +30,9 @@
 		justify-content: center
 		align-items: center
 		margin-left: 0.625rem
+		+md
+			width: 2rem
+			height: 2rem
 		.icon
 			--sz: 0.875rem
 			width: var(--sz)
@@ -98,6 +103,10 @@
 	align-items: center
 	margin-left: -1.25rem
 	margin-right: -1.25rem
+	+md
+		flex-direction: column
+		margin-left: 20px
+		align-items: flex-start
 	&__li
 		margin: 0
 		padding: 0 1.25rem

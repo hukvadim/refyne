@@ -7,12 +7,7 @@
 						<p class="blog-card__category">@@if (context.category) { @@category }@@if (!context.category) { Contact us }</p>
 						<h2 class="block-title">
 							<span class="block-title__text">@@if (context.title) { @@title }@@if (!context.title) { ready }</span>
-							<span class="block-title__text-line text-line-with-ghost">
-								<span class="text-ghost">@@if (context.titleLine) { @@titleLine }@@if (!context.titleLine) { to start work? }</span>
-								<svg class="text-line">
-									<text x="6" y="80">@@if (context.titleLine) { @@titleLine }@@if (!context.titleLine) { to start work? }</text>
-								</svg>
-							</span>
+							<span class="block-title__text-line t-line-bl">@@if (context.titleLine) { @@titleLine }@@if (!context.titleLine) { to start work? }</span>
 						</h2>
 						<a href="#" class="gallery-mega-slide__btn btn btn-light mb-20">
 							<span class="btn-text">@@if (context.btn) { @@btn }@@if (!context.btn) { Contact us }</span>

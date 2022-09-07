@@ -25,6 +25,8 @@
 	--ov-box-bg: var(--gray-light) // Gallery overlay boxes
 
 	--nav-padding: 11.25rem
+	+lg
+		--img-hero-sz: 5rem
 
 *, ::before, ::after
 	box-sizing: border-box
@@ -41,6 +43,7 @@ $bem: '.logo'
 .logo
 	position: relative
 	cursor: pointer
+	display: inline-block
 	& &__part
 		--w: 9rem
 		--h: 1.5rem
@@ -113,6 +116,28 @@ a
 		color: var(--pr-h)
 		text-decoration: none
 
+.t-line-bl
+	color: transparent
+	text-shadow: 0.0625rem 0.0625rem black, -0.0625rem -0.0625rem black
+
+@supports(-webkit-text-stroke: 0.0625rem black)
+	.t-line-bl
+		color: transparent
+		-webkit-text-stroke: 0.0625rem black
+		text-shadow: none
+
+.t-line-wh
+	color: transparent
+	text-shadow: 0.0625rem 0.0625rem white, -0.0625rem -0.0625rem white
+
+@supports(-webkit-text-stroke: 0.0625rem white)
+	.t-line-wh
+		color: transparent
+		-webkit-text-stroke: 0.0625rem white
+		text-shadow: none
+	
+
+
 .img
 	width: 100%
 
@@ -154,6 +179,35 @@ a
 	li
 		&::before
 			display: none
+
+.abs-dot
+	position: relative
+	--dot-t: 0
+	--dot-l: 0
+	--dot-c: var(--pr)
+	&::before
+		content: ''
+		position: absolute
+		top: var(--dot-t)
+		left: var(--dot-l)
+		width: 0.5rem
+		height: 0.5rem
+		border-radius: 50%
+		background-color: var(--dot-c)
+		transition: .25s
+
+.dot-label
+	--dot-t: 0.3125rem
+	--typo-elm-mt: 0
+	color: var(--gray)
+	font-weight: 400
+	padding-left: 1.25rem
+	@extend .abs-dot
+	&--18
+		--dot-t: 0.4375rem
+		padding-left: 1.5rem
+		font-size: 1.125rem
+
 
 .animate::before,
 .animate::after,
@@ -231,8 +285,16 @@ $fwList: 300 400 500 600 700
 .main-blocks-divider
 	&-p
 		--p: 16.875rem 0
+		+xl
+			padding: 12.875rem 0
 	&-m
 		--m: 16.875rem 0
+		+xxl
+			margin: 12.875rem 0
+		+lg
+			margin: 8.875rem 0
+		+md
+			margin: 6.875rem 0
 
 
 
@@ -314,11 +376,15 @@ $fwList: 300 400 500 600 700
 		&--center-right
 			--fz-as: center
 			text-align: right
+			+lg
+				text-align: left
 			&-flex
 				--fz-as: center
 				display: flex
 				flex-direction: column
 				align-items: flex-end
+				+lg
+					align-items: flex-start
 		&--bottom-left
 			--fz-as: flex-end
 			--mb: 0
@@ -328,6 +394,12 @@ $fwList: 300 400 500 600 700
 			--mb: 2.625rem
 			margin-bottom: var(--mb)
 			text-align: right
+			+lg
+				--fz-as: flex-start
+				text-align: left
+				margin-top: 1.25rem
+			+md
+				margin-bottom: 0
 			.text-mutted:last-child
 				--typo-elm-mb: 0.3125rem
 		&--text-max
@@ -335,10 +407,19 @@ $fwList: 300 400 500 600 700
 			max-width: 31.875rem
 		&--offset-r-100
 			right: -6.25rem
+		.text-mutted
+			font-size: 1rem
 	&--3-col
 		--fxw: wrap
 		--card-max: 33.2%
+		+lg
+			--card-max: 50%
+	&-box-title
+		+lg
+			flex-direction: column
 		.grid-item
+			&--title
+			&--text
 
 
 

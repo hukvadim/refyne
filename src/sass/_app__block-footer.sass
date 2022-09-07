@@ -1,11 +1,14 @@
+$bem: '.footer'
 .footer
 	background-color: var(--bl)
 	color: var(--wh)
 	padding-top: 12rem
+	overflow: hidden
+	+lg
+		padding-top: 8rem 
 	.form-style
 		max-width: 31.875rem
 	& &__title
-		--fz-title: 3.5rem
 		--fz-title: 3.5rem
 		font-size: var(--fz-title)
 		color: var(--wh)
@@ -15,22 +18,50 @@
 			--color: var(--wh)
 		.block-title
 			&__text-line
-				--fz-ghost: var(--fz-title)
 	& &__top
+		--card-width: 50%
+		+lg
+			--card-width: 100%
+			flex-direction: column
+		&-title
+			+xxl
+				width: 70%
+			+lg
+				width: 100%
 		&-form
 			align-self: flex-end
+			margin-bottom: 1.25rem
 			.form-style
 				margin-left: auto
 				margin-right: 0
 				margin-bottom: 0.25rem
+				+lg
+					margin-left: 0
+					margin-right: 0
+					margin-top: 1.875rem
 	& &__links
+		+md
+			flex-direction: column
+			padding-top: 120px
+		&-part
+			+md
+				width: 100%
 		&--top
 			--p: 17.25rem 0 5rem
 			--card-width: 50%
+			+lg
+				--p: 8.25rem 0 5rem
 		&--bottom
 
 	& &__contacts
+		--p: 3.875rem 0 0
+		+sm
+			flex-direction: column
 		&-part
+			+md
+				width: 100%
+				flex-direction: column
+				margin-bottom: 3.125rem
 		&-label,
 		&-value,
 		&-map
@@ -52,10 +83,18 @@
 	& &__copyright
 		margin: 0
 		opacity: .6
+		+sm
+			order: 2
+			margin-top: 1.25rem
 	& &__bottom
 		justify-content: space-between
 		color: var(--wh)
 		padding: 2.1875rem 0
+		+md
+			flex-wrap: wrap
+		+sm
+			flex-direction: column
+			align-items: center
 		.list
 			--li-p: 0 0.75rem
 			--li-m: 0
@@ -66,9 +105,16 @@
 			--link-h-c: var(--pr)
 			&-link
 				opacity: .6
+				padding: 0.3125rem 0
 				&:hover
 					opacity: 1
-
+		#{$bem}__logo
+			&-wrap
+				+md
+					order: -1
+					width: 100%
+					margin: 0 auto 1.5rem
+					text-align: center
 	.detail
 		color: var(--wh)
 		&.detail-1
@@ -76,8 +122,12 @@
 			--r: -42.8125rem
 			--sz: 35.9375rem
 			--rt: -30deg
+			+xxl
+				right: -37.8125rem
 		&.detail-2
 			--t: 0.625rem
 			--l: -39.375rem
 			--sz: 35rem
 			--rt: 120deg
+			+xxl
+				left: -37.375rem

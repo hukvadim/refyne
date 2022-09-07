@@ -164,9 +164,7 @@
 			</svg>
 		</div>
 
-<div class="call-nav js-show-menu">
-	Menu
-</div>
+<div class="call-nav js-show-navigation">Navigation</div>
 
 <nav class="nav">
 	<div class="nav__container container container-fluid d-flex d-justify-between">
@@ -184,10 +182,8 @@
 			</svg>
 		</a>
 
-		<div class="nav__menu js-show-menu">
-			Menu
-		</div>
-	
+		<div class="nav__menu js-show-navigation">Menu</div>
+
 	</div>
 </nav>
 
@@ -198,15 +194,17 @@
 		<div class="header__hold">
 			<div class="header-slide header-slide--60">
 				<div class="header-slide__gallery-holder">
-					<div class="gallery-slide">
-						<img src="img/header-slide.jpg" alt="" class="gallery-slide-img">
+					<div class="js-gallery-single-img">
+						<div class="gallery-item"><div class="gallery-slide"><img src="img/header-slide.jpg" alt="" class="gallery-slide-img"></div></div>
+						<div class="gallery-item"><div class="gallery-slide"><img src="img/header-slide.jpg" alt="" class="gallery-slide-img"></div></div>
+						<div class="gallery-item"><div class="gallery-slide"><img src="img/header-slide.jpg" alt="" class="gallery-slide-img"></div></div>
 					</div>
 					<svg class="header-slide__detail icon icon-hero-element rotate"><use xlink:href="#icon-hero-element"></use></svg>
 				</div>
-				<p class="header-slide__meta header-slide__meta--xl text-mutted">Refyne Agency</p>
-				<h2 class="header-slide__title">Gør <span class="italic fw-500">karriere</span> hos Refyne</h2>
+				<p class="header-slide__meta text-mutted">Refyne Agency</p>
+				<h2 class="header-slide__title">Gør <span class="italic fw-700">karriere</span> hos Refyne</h2>
 				<p class="header-slide__text text-mutted">Refyne søger hele tiden dygtige specialister, som vil være med på rejsen.</p>
-				<a href="#" class="header-slide__btn btn btn-light block-divider">
+				<a href="careers-detail.html" class="header-slide__btn btn btn-light block-divider">
 					<span class="btn-text">Check open jobs</span>
 					<span class="btn-icon btn-icon--fill">
 						<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
@@ -241,12 +239,7 @@
 						</svg>
 					</span>
 					<span class="block-title__text">benefits</span>
-					<span class="block-title__text-line text-line-with-ghost">
-						<span class="text-ghost">of working with us</span>
-						<svg class="text-line">
-							<text x="0" y="80">of working with us</text>
-						</svg>
-					</span>
+					<span class="block-title__text-line t-line-bl">of working with us</span>
 				</h2>
 			</div>
 			<div class="grid-item grid-item--text grid-item--bottom-right">
@@ -321,12 +314,7 @@
 						</svg>
 					</span>
 					<span class="block-title__text">meet</span>
-					<span class="block-title__text-line text-line-with-ghost">
-						<span class="text-ghost">our team</span>
-						<svg class="text-line">
-							<text x="0" y="80">our team</text>
-						</svg>
-					</span>
+					<span class="block-title__text-line t-line-bl">our team</span>
 				</h2>
 			</div>
 			<div class="grid-item grid-item--text grid-item--bottom-right">
@@ -367,12 +355,7 @@
 						</svg>
 					</span>
 					<span class="block-title__text">tillid gennem</span>
-					<span class="block-title__text-line text-line-with-ghost">
-						<span class="text-ghost">transparens</span>
-						<svg class="text-line">
-							<text x="0" y="80">transparens</text>
-						</svg>
-					</span>
+					<span class="block-title__text-line t-line-bl">transparens</span>
 				</h2>
 			</div>
 			<div class="grid-item grid-item--text grid-item--text-max">
@@ -425,12 +408,7 @@
 						</svg>
 					</span>
 					<span class="block-title__text">Nuværende</span>
-					<span class="block-title__text-line text-line-with-ghost">
-						<span class="text-ghost">jobopslag</span>
-						<svg class="text-line">
-							<text x="5" y="80">jobopslag</text>
-						</svg>
-					</span>
+					<span class="block-title__text-line t-line-bl">jobopslag</span>
 				</h2>
 			</div>
 			<div class="news-category grid-item grid-item--text grid-item--bottom-right">
@@ -451,6 +429,24 @@
 				<p class="blog-card__category">SEO</p>
 				<a href="#" class="blog-card__title">Senior SEO Konsulent</a>
 				<p class="blog-card__tag-list">Ved du hvordan man gør websites synlige på Google? Og kan du omsætte din viden til konkrete actions?</p>
+				<div class="blog-card__btn-hidden">
+					<div class="blog-card__btn-item">
+						<a href="#" class="blog-card__btn btn btn-light">
+							<span class="btn-text">Apply now</span>
+							<span class="btn-icon btn-icon--fill">
+								<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+							</span>
+						</a>
+					</div>
+					<div class="blog-card__btn-item">
+						<a href="#" class="blog-card__btn btn btn-light">
+							<span class="btn-text">Læs mere om rollen</span>
+							<span class="btn-icon">
+								<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+							</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -460,6 +456,24 @@
 				<p class="blog-card__category">SEO</p>
 				<a href="#" class="blog-card__title">Senior SEO Konsulent</a>
 				<p class="blog-card__tag-list">Ved du hvordan man gør websites synlige på Google? Og kan du omsætte din viden til konkrete actions?</p>
+				<div class="blog-card__btn-hidden">
+					<div class="blog-card__btn-item">
+						<a href="#" class="blog-card__btn btn btn-light">
+							<span class="btn-text">Apply now</span>
+							<span class="btn-icon btn-icon--fill">
+								<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+							</span>
+						</a>
+					</div>
+					<div class="blog-card__btn-item">
+						<a href="#" class="blog-card__btn btn btn-light">
+							<span class="btn-text">Læs mere om rollen</span>
+							<span class="btn-icon">
+								<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+							</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -469,6 +483,24 @@
 				<p class="blog-card__category">SEO</p>
 				<a href="#" class="blog-card__title">Senior SEO Konsulent</a>
 				<p class="blog-card__tag-list">Ved du hvordan man gør websites synlige på Google? Og kan du omsætte din viden til konkrete actions?</p>
+				<div class="blog-card__btn-hidden">
+					<div class="blog-card__btn-item">
+						<a href="#" class="blog-card__btn btn btn-light">
+							<span class="btn-text">Apply now</span>
+							<span class="btn-icon btn-icon--fill">
+								<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+							</span>
+						</a>
+					</div>
+					<div class="blog-card__btn-item">
+						<a href="#" class="blog-card__btn btn btn-light">
+							<span class="btn-text">Læs mere om rollen</span>
+							<span class="btn-icon">
+								<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+							</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -478,6 +510,24 @@
 				<p class="blog-card__category">SEO</p>
 				<a href="#" class="blog-card__title">Senior SEO Konsulent</a>
 				<p class="blog-card__tag-list">Ved du hvordan man gør websites synlige på Google? Og kan du omsætte din viden til konkrete actions?</p>
+				<div class="blog-card__btn-hidden">
+					<div class="blog-card__btn-item">
+						<a href="#" class="blog-card__btn btn btn-light">
+							<span class="btn-text">Apply now</span>
+							<span class="btn-icon btn-icon--fill">
+								<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+							</span>
+						</a>
+					</div>
+					<div class="blog-card__btn-item">
+						<a href="#" class="blog-card__btn btn btn-light">
+							<span class="btn-text">Læs mere om rollen</span>
+							<span class="btn-icon">
+								<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+							</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -487,10 +537,29 @@
 				<p class="blog-card__category">SEO</p>
 				<a href="#" class="blog-card__title">Senior SEO Konsulent</a>
 				<p class="blog-card__tag-list">Ved du hvordan man gør websites synlige på Google? Og kan du omsætte din viden til konkrete actions?</p>
+				<div class="blog-card__btn-hidden">
+					<div class="blog-card__btn-item">
+						<a href="#" class="blog-card__btn btn btn-light">
+							<span class="btn-text">Apply now</span>
+							<span class="btn-icon btn-icon--fill">
+								<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+							</span>
+						</a>
+					</div>
+					<div class="blog-card__btn-item">
+						<a href="#" class="blog-card__btn btn btn-light">
+							<span class="btn-text">Læs mere om rollen</span>
+							<span class="btn-icon">
+								<svg class="icon icon-arrow-top-right"><use xlink:href="#icon-arrow-top-right"></use></svg>
+							</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
 
 	</div>
 </div>
@@ -499,7 +568,7 @@
 
 <div class="careers-blog-small main-blocks-divider-p block-blog-list blog-list blog-list--offset blog-list--small block-divider">
 	<div class="container">
-		<div class="blog-list__box grid">
+		<div class="blog-list__box grid grid-box-title">
 			<div class="grid-item grid-item--title">
 				<h2 class="block-title">
 					<span class="block-title__icon">
@@ -508,12 +577,7 @@
 						</svg>
 					</span>
 					<span class="block-title__text">featured</span>
-					<span class="block-title__text-line text-line-with-ghost">
-						<span class="text-ghost">news</span>
-						<svg class="text-line">
-							<text x="0" y="80">news</text>
-						</svg>
-					</span>
+					<span class="block-title__text-line t-line-bl">news</span>
 				</h2>
 				<p class="text-mutted">Vi kan hjælpe dig, uanset om du ønsker at sælge flere produkter, få flere leads eller at blive mere synlig som virksomhed.</p>
 			</div>
@@ -529,44 +593,44 @@
 
 		<div class="blog-list__slider js-blog-list">
 
-			<div class="blog-card blog-card--small">
-	<a href="news.html" class="blog-card__img-hold">
+			<div class="blog-card blog-card--small 111">
+	<a href="news-detail.html" class="blog-card__img-hold">
 		<img src="img/blog-card-3.jpg" alt="" class="blog-card__img">
 	</a>
 	<div class="blog-card__text-hold">
-		<a href="news.html" class="blog-card__title">Official website of Riyadh, Saudi Arabia's capital</a>
+		<a href="news-detail.html" class="blog-card__title">Official website of Riyadh, Saudi Arabia's capital</a>
 	</div>
 </div>
-			<div class="blog-card blog-card--small">
-	<a href="news.html" class="blog-card__img-hold">
+			<div class="blog-card blog-card--small 111">
+	<a href="news-detail.html" class="blog-card__img-hold">
 		<img src="img/blog-card-3.3.jpg" alt="" class="blog-card__img">
 	</a>
 	<div class="blog-card__text-hold">
-		<a href="news.html" class="blog-card__title">Official website of Riyadh, Saudi Arabia's capital</a>
+		<a href="news-detail.html" class="blog-card__title">Official website of Riyadh, Saudi Arabia's capital</a>
 	</div>
 </div>
-			<div class="blog-card blog-card--small">
-	<a href="news.html" class="blog-card__img-hold">
+			<div class="blog-card blog-card--small 111">
+	<a href="news-detail.html" class="blog-card__img-hold">
 		<img src="img/blog-card-3.2.jpg" alt="" class="blog-card__img">
 	</a>
 	<div class="blog-card__text-hold">
-		<a href="news.html" class="blog-card__title">Official website of Riyadh, Saudi Arabia's capital</a>
+		<a href="news-detail.html" class="blog-card__title">Official website of Riyadh, Saudi Arabia's capital</a>
 	</div>
 </div>
-			<div class="blog-card blog-card--small">
-	<a href="news.html" class="blog-card__img-hold">
+			<div class="blog-card blog-card--small 111">
+	<a href="news-detail.html" class="blog-card__img-hold">
 		<img src="img/blog-card-3.jpg" alt="" class="blog-card__img">
 	</a>
 	<div class="blog-card__text-hold">
-		<a href="news.html" class="blog-card__title">Official website of Riyadh, Saudi Arabia's capital</a>
+		<a href="news-detail.html" class="blog-card__title">Official website of Riyadh, Saudi Arabia's capital</a>
 	</div>
 </div>
-			<div class="blog-card blog-card--small">
-	<a href="news.html" class="blog-card__img-hold">
+			<div class="blog-card blog-card--small 111">
+	<a href="news-detail.html" class="blog-card__img-hold">
 		<img src="img/blog-card-3.3.jpg" alt="" class="blog-card__img">
 	</a>
 	<div class="blog-card__text-hold">
-		<a href="news.html" class="blog-card__title">Official website of Riyadh, Saudi Arabia's capital</a>
+		<a href="news-detail.html" class="blog-card__title">Official website of Riyadh, Saudi Arabia's capital</a>
 	</div>
 </div>
 
@@ -580,19 +644,14 @@
 
 
 
-<footer class="footer ov-hidden">
+<footer class="footer">
 	<div class="container">
 
-		<div class="footer__top grid" style="--card-width: 50%">
+		<div class="footer__top grid">
 			<div class="footer__top-title grid-item">
 				<h2 class="block-title footer__title">
 					<span class="block-title__text footer__title-part-1">Have a project in mind?</span>
-					<span class="block-title__text-line text-line-with-ghost footer__title-part-2">
-						<span class="text-ghost">Let's make it happen</span>
-						<svg class="text-line">
-							<text x="0" y="52" fill="none">Let's make it happen</text>
-						</svg>
-					</span>
+					<span class="block-title__text-line footer__title-part-2 t-line-wh">Let's make it happen</span>
 				</h2>
 			</div>
 			<div class="footer__top-form grid-item">
@@ -608,7 +667,7 @@
 		<div class="footer__links footer__links--top block-divider grid">
 			<div class="footer__links-part grid-item">
 				<a href="#" class="footer__link">hello@refyne.dk</a>
-				<div class="footer__contacts block-divider grid" style="--p: 3.875rem 0 0;">
+				<div class="footer__contacts block-divider grid">
 					<div class="footer__contacts-part grid-item">
 						<p class="footer__contacts-label">København:</p>
 						<p class="footer__contacts-value">Kigkurren 8D, 3. Tv.<br>2300 København S</p>
@@ -635,18 +694,20 @@
 
 		<div class="footer__bottom d-flex">
 			<p class="footer__copyright">&copy; 2022 Refyne</p>
-			<a href="index.html" class="footer__logo logo logo--wh">
-				<svg class="icon icon-logo logo__part"><use xlink:href="#icon-logo"></use></svg>
-				<svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__detail">
-					<path d="M8.07256 15.7752L0.462158 0.710449H5.96681L10.7952 10.4814L8.07256 15.7752Z" fill="url(#logo_detail_gradient-wh)" />
-					<defs>
-						<linearGradient id="logo_detail_gradient-wh" gradientTransform="rotate(30)"> 
-							<stop offset="5%" stop-color="white"/> 
-							<stop offset="100%" stop-color="white" stop-opacity=".2"/> 
-						</linearGradient> 
-					</defs>
-				</svg>
-			</a>
+			<div class="footer__logo-wrap">
+				<a href="index.html" class="footer__logo logo logo--wh">
+					<svg class="icon icon-logo logo__part"><use xlink:href="#icon-logo"></use></svg>
+					<svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__detail">
+						<path d="M8.07256 15.7752L0.462158 0.710449H5.96681L10.7952 10.4814L8.07256 15.7752Z" fill="url(#logo_detail_gradient-wh)" />
+						<defs>
+							<linearGradient id="logo_detail_gradient-wh" gradientTransform="rotate(30)"> 
+								<stop offset="5%" stop-color="white"/> 
+								<stop offset="100%" stop-color="white" stop-opacity=".2"/> 
+							</linearGradient> 
+						</defs>
+					</svg>
+				</a>
+			</div>
 			<ul class="list list-unstyled d-flex">
 				<li class="list-li"><a href="#" class="list-link">Legals</a></li>
 				<li class="list-li"><a href="#" class="list-link">Privacy Policy</a></li>
@@ -657,6 +718,47 @@
 		<svg class="detail detail-2 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg>
 	</div> <!-- .container  -->
 </footer> <!-- .footer  -->
+
+
+
+
+
+
+<div class="navigation js-navigation">
+	<div class="container">
+		<ul class="navigation__base-nav menu">
+			<li class="menu__li menu__li--label"><h4 class="menu__label dot-label dot-label--18">Menu</h4></li>
+			<li class="menu__li"><a href="index.html" class="menu__link">Home</a></li>
+			<li class="menu__li"><a href="services.html" class="menu__link">Services</a></li>
+			<li class="menu__li"><a href="about-us.html" class="menu__link">About us</a></li>
+			<li class="menu__li"><a href="careers.html" class="menu__link">Careers</a></li>
+			<li class="menu__li"><a href="news.html" class="menu__link">News</a></li>
+		</ul>
+
+		<div class="navigation__contacts">
+			<div class="navigation__contacts-item contacts-inline">
+				<h4 class="contacts-inline__label dot-label dot-label--18">Social</h4>
+				<div class="contacts-inline__hold">
+					<a href="#" class="contacts-inline__value">LinkedIn</a>
+					<a href="#" class="contacts-inline__value">Behance</a>
+					<a href="#" class="contacts-inline__value">Instagram</a>
+					<a href="#" class="contacts-inline__value">Twitter</a>
+				</div>
+			</div>
+			<div class="navigation__contacts-item contacts-inline">
+				<h4 class="contacts-inline__label dot-label dot-label--18">Get in touch</h4>
+				<div class="contacts-inline__hold">
+					<a href="mailto:hello@refyne.dk" class="contacts-inline__value">Email: hello@refyne.dk</a>
+					<a href="tel:+4571807000" class="contacts-inline__value">Telefon: +45 7180 7000</a>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- <svg class="detail detail-1 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg> -->
+		<!-- <svg class="detail detail-2 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg> -->
+	</div>
+</div>
 
 
 	<script src="libs/jquery/jquery-3.6.0.min.js"></script>

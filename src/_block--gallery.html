@@ -1,7 +1,7 @@
 <div class="gallery block-divider">
 	<div class="container">
-		<div class="gallery__box d-flex">
-			<div class="gallery__text">
+		<div class="gallery__box grid grid-box-title">
+			<div class="grid-item grid-item--title">
 				<h2 class="block-title">
 					<span class="block-title__icon">
 						<svg class="text-line">
@@ -9,16 +9,11 @@
 						</svg>
 					</span>
 					<span class="block-title__text">@@if (context.title) { @@title }@@if (!context.title) { vi har før }</span>
-					<span class="block-title__text-line text-line-with-ghost">
-						<span class="text-ghost">@@if (context.titleLine) { @@titleLine }@@if (!context.titleLine) { hjulpet andre }</span>
-						<svg class="text-line">
-							<text x="0" y="80">@@if (context.titleLine) { @@titleLine }@@if (!context.titleLine) { hjulpet andre }</text>
-						</svg>
-					</span>
+					<span class="block-title__text-line t-line-bl">@@if (context.titleLine) { @@titleLine }@@if (!context.titleLine) { hjulpet andre }</span>
 				</h2>
 				<p class="text-mutted">Vi kan hjælpe dig, uanset om du ønsker at sælge flere produkter, få flere leads eller at blive mere synlig som virksomhed.</p>
 			</div>
-			<div class="gallery__btn-holder">
+			<div class="grid-item grid-item--text grid-item--bottom-right">
 				<span class="text-mutted gallery__meta-item">Drag to navigate</span>
 			</div>
 		</div>
