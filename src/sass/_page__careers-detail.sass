@@ -2,6 +2,8 @@
 	.header
 		&__text-wrap
 			--p: 1.25rem 0 6.875rem
+			+xl
+				padding-bottom: 0
 		&__title
 			--typo-elm-mb: 4.0625rem
 		&--big-text
@@ -10,22 +12,31 @@
 		.grid-item
 			&--title
 				max-width: 52.5rem
+				+xl
+					max-width: 100%
 			&--text
 				--fz-as: flex-end
 				max-width: 33.75rem
 				margin-bottom: -3.625rem
+				+xl
+					max-width: 46.25rem
+					margin-bottom: 0
+					padding-bottom: 0
 				.text-mutted
 					--fz: 1.125rem
 
 
 	.gallery-images
-		--m: -14.75rem 0 0
 		.gallery-el-overlay
 			--offset-box-before-c: var(--gray-light)
 
 
 	.page-content
 		--m: 18.125rem 0 20rem
+		+md
+			margin: 10.125rem 0 0
+		+sm
+			margin: 6.125rem 0 0
 		.typography
 			--w: 51.25rem
 			--fz: 1.125rem
@@ -43,7 +54,13 @@
 	.join-team
 		--p: 9.875rem 0 14.0625rem
 		--m: 19.6875rem 0 0
+		+md
+			margin: 10.6875rem 0 0
 
 
 	.other-jobs
 		--p: 19.25rem 0 17.5rem
+		+md
+			padding: 13.25rem 0 17.5rem
+		+sm
+			padding: 7.25rem 0 12.5rem

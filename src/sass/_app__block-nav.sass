@@ -4,7 +4,7 @@
 	border-radius: 50%
 	background-color: var(--pr)
 	position: fixed
-	z-index: 99
+	z-index: 99999
 	top: 4.375rem
 	right: 80px
 	font-size: 0
@@ -12,6 +12,8 @@
 	cursor: pointer
 	+xl-1260
 		right: 1.875rem
+	+md
+		top: 2.5rem
 	&::before,
 	&::after
 		content: ''
@@ -21,6 +23,7 @@
 		background-color: var(--wh)
 		right: 0.75rem
 		transition: .25s
+		border-radius: 0.125rem
 	&::before
 		top: 1rem
 	&::after
@@ -31,6 +34,48 @@
 			width: 0.9375rem
 		&::after
 			width: 1.125rem
+	.lb-close,
+	.lb-esc
+		position: absolute
+		display: none
+		transition: .25s
+	.lb-close
+		font-size: 1rem
+		color: var(--wh)
+		text-transform: uppercase
+		letter-spacing: 0.05rem
+		top: 0.5rem
+		right: 2rem
+		font-weight: 300
+	.lb-esc
+		font-size: 0.75rem
+		color: var(--wh)
+		opacity: .4
+		bottom: 0
+		width: 2.5rem
+		text-align: center
+		font-weight: 300
+		letter-spacing: 0.05625rem
+	&.show
+		background-color: transparent
+		&::before,
+		&::after
+			width: 1.25rem
+			top: 1.1875rem
+		&::before
+			transform: rotate(45deg)
+			left: 0.625rem
+		&::after
+			transform: rotate(-45deg)
+			right: 0.625rem
+		.lb-close,
+		.lb-esc
+			display: block
+		.lb-close
+			right: 2.8125rem
+		.lb-esc
+			bottom: -1rem
+
 
 
 $bem: '.nav'
@@ -38,10 +83,19 @@ $bem: '.nav'
 	position: absolute
 	width: 100%
 	padding: 4.75rem 0
+	z-index: 9999
+	+md
+		padding: 2.75rem 0
+
 	& &__container
 		align-items: center
 	& &__logo
 		top: 0.1875rem
+		.logo--wh
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
 	& &__menu
 		font-size: 16px
 		text-transform: uppercase
@@ -49,6 +103,13 @@ $bem: '.nav'
 		cursor: pointer
 	&-padding
 		padding-top: var(--nav-padding)
+	&.nav-show
+		#{$bem}__logo
+			.logo--wh
+				opacity: 1
+			.logo--bl
+				opacity: 0
+
 
 
 
@@ -64,18 +125,56 @@ $bem: '.nav'
 	font-weight: 300
 	padding-bottom: 10.875rem
 	display: none
+	overflow: auto
+	.dot-label--18
+		+lg
+			font-size: 1rem
+	.detail-holder
+		width: 100%
+		height: 100%
+		overflow: hidden
+		position: absolute
+		top: 0
+		left: 0
 	&.show
 		display: block
 	.container
 		height: 100%
 		display: flex
 		align-items: flex-end
+		z-index: 2
+		+lg
+			align-items: flex-start
+			flex-direction: column
 	& &__base-nav
 		position: absolute
 		top: 0
 		right: 0
+		padding: 0 6.125rem 3.75rem
+		+lg
+			position: relative
+			padding: 0
+			margin-bottom: 5rem
 	& &__contacts
+		+lg
+			margin-bottom: 9rem
 		&-item
 			padding-bottom: 6.375rem
 			&:last-child
 				padding-bottom: 0
+	.detail
+		--c: var(--wh)
+		--sz: 700px
+		+lg
+			width: 22.25rem
+			height: 22.25rem
+		&-1
+			--t: -18.25rem
+			--l: -16.875rem
+			+lg
+				top: -10.125rem
+				left: -6.875rem
+		&-2
+			--t: -460px
+			--r: -530px
+			display: none

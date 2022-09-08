@@ -61,6 +61,7 @@ $('.js-blog-list').slick({
 	slidesToScroll: 1,
 	dots: false,
 	arrows: true,
+	adaptiveHeight: true,
 	prevArrow: '',
 	nextArrow: '<div class="gallery-item-btn btn btn-circle"><svg class="icon icon-arrows"><use xlink:href="#icon-arrows"></use></svg></div>',
 	responsive: [
@@ -87,8 +88,23 @@ $('.js-blog-list-rtl').slick({
 	dots: false,
 	arrows: true,
 	rtl: true,
+	adaptiveHeight: true,
 	prevArrow: '',
 	nextArrow: '<div class="gallery-item-btn btn btn-circle"><svg class="icon icon-arrows"><use xlink:href="#icon-arrows"></use></svg></div>',
+	responsive: [
+		{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 2,
+			}
+		},
+		{
+			breakpoint: 890,
+			settings: {
+				slidesToShow: 1,
+			}
+		},
+	]
 });
 
 
@@ -96,26 +112,35 @@ $('.js-gallery').slick({
 	infinite: false,
 	slidesToShow: 3,
 	slidesToScroll: 1,
+	autoplay: true,
 	dots: false,
-	arrows: false
+	arrows: false,
+	responsive: [
+		{
+			breakpoint: 1460,
+			settings: {
+				slidesToShow: 2,
+			}
+		},
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 1,
+				centerMode: true,
+			}
+		},
+	]
 });
 
 
 $('.js-gallery-our-team').slick({
 	infinite: false,
-	slidesToShow: 2,
+	slidesToShow: 1,
 	slidesToScroll: 1,
 	dots: false,
 	arrows: true,
+	adaptiveHeight: true,
 	nextArrow: '<div class="gallery-item-btn btn btn-circle"><svg class="icon icon-arrows"><use xlink:href="#icon-arrows"></use></svg></div>',
-	responsive: [
-		{
-			breakpoint: 1300,
-			settings: {
-				slidesToShow: 1,
-			}
-		},
-	]
 });
 
 
@@ -191,6 +216,18 @@ $(document).on('mouseleave', '.js-services-hover', function(event) {
 
 $(document).on('click', '.js-show-navigation', function(event) {
 	event.preventDefault();
+
 	$(this).toggleClass('show');
+	$('body').toggleClass('toggle-nav-show');
+	$('body > .nav').toggleClass('nav-show');
 	$('.js-navigation').toggleClass('show');
+});
+
+$(document).keydown(function(e){
+	if (e.keyCode == 27) {
+		$('.js-show-navigation').removeClass('show');
+		$('body').removeClass('toggle-nav-show');
+		$('body > .nav').removeClass('nav-show');
+		$('.js-navigation').removeClass('show');
+	}
 });

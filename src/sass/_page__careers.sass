@@ -8,8 +8,22 @@
 	$bem: '.preference'
 	.preference
 		--m: 2.1875rem 0 11.875rem
+		+lg
+			margin: 2.1875rem 0 7.875rem
+		+sm
+			margin: 2.1875rem 0 1.875rem
 		#{$bem}__box-header
 			margin-bottom: 6.25rem
+		#{$bem}__header
+			+sm
+				margin-bottom: 1.875rem
+			&.grid
+			.grid-item
+				&--title
+				&--text
+					max-width: 320px
+					+lg
+						max-width: 100%
 		#{$bem}__box-content
 
 
@@ -18,16 +32,28 @@
 		.container
 			padding-top: 6.5625rem
 			padding-bottom: 16.25rem
-		#{$bem}__box
-			margin-left: 6.875rem
+			+sm
+				padding-top: 8.5625rem
+				padding-bottom: 9.25rem
 		.detail
 			&.detail-1
 				--t: initial
 				--b: 2.5rem
 				--r: -31.5rem
+				+lg
+					right: -10.625rem
+					top: 0rem
+				+sm
+					right: -6.625rem
 			&.detail-2
 				--b: 10.625rem
 				--l: -38.625rem
+				+lg
+					left: -6.875rem
+					bottom: 5rem
+				+sm
+					bottom: 0
+
 
 
 	.gallery-masonry
@@ -36,6 +62,8 @@
 
 	.other-jobs
 		--p: 0
+		+xl
+			padding-bottom: 0
 
 
 	.careers-blog-small

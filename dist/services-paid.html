@@ -164,22 +164,39 @@
 			</svg>
 		</div>
 
-<div class="call-nav js-show-navigation">Navigation</div>
+<div class="call-nav js-show-navigation">
+	<span class="lb-close">Close</span>
+	<span class="lb-esc">esc</span>
+</div>
 
 <nav class="nav">
 	<div class="nav__container container container-fluid d-flex d-justify-between">
 
 		<a href="index.html" class="nav__logo logo">
-			<svg class="icon icon-logo logo__part"><use xlink:href="#icon-logo"></use></svg>
-			<svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__detail">
-				<path d="M8.07256 15.7752L0.462158 0.710449H5.96681L10.7952 10.4814L8.07256 15.7752Z" fill="url(#logo_detail_gradient)" />
-				<defs>
-					<linearGradient id="logo_detail_gradient" gradientTransform="rotate(30)"> 
-						<stop offset="5%" stop-color="black"/> 
-						<stop offset="100%" stop-color="black" stop-opacity=".2"/> 
-					</linearGradient> 
-				</defs>
-			</svg>
+			<span class="logo--bl">
+				<svg class="icon icon-logo logo__part"><use xlink:href="#icon-logo"></use></svg>
+				<svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__detail">
+					<path d="M8.07256 15.7752L0.462158 0.710449H5.96681L10.7952 10.4814L8.07256 15.7752Z" fill="url(#logo_detail_gradient)" />
+					<defs>
+						<linearGradient id="logo_detail_gradient" gradientTransform="rotate(30)"> 
+							<stop offset="5%" stop-color="black"/> 
+							<stop offset="100%" stop-color="black" stop-opacity=".2"/> 
+						</linearGradient> 
+					</defs>
+				</svg>
+			</span>
+			<span class="logo--wh">
+				<svg class="icon icon-logo logo__part"><use xlink:href="#icon-logo"></use></svg>
+				<svg class="logo__detail" width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo__detail">
+					<path d="M8.07256 15.7752L0.462158 0.710449H5.96681L10.7952 10.4814L8.07256 15.7752Z" fill="url(#logo_detail_gradient-wh)" />
+					<defs>
+						<linearGradient id="logo_detail_gradient-wh" gradientTransform="rotate(30)"> 
+							<stop offset="5%" stop-color="white"/> 
+							<stop offset="100%" stop-color="white" stop-opacity=".2"/> 
+						</linearGradient> 
+					</defs>
+				</svg>
+			</span>
 		</a>
 
 		<div class="nav__menu js-show-navigation">Menu</div>
@@ -216,7 +233,7 @@
 
 
 
-<div class="gallery-images block-divider">
+<div class="gallery-images-under-header gallery-images block-divider">
 	<div class="gallery-images-wrapper gallery-el-overlay js-gallery">
 		<div class="gallery-slide-hold"><img src="img/blog-card-3.2.jpg" alt="" class="gallery-slide-img"></div>
 		<div class="gallery-slide-hold"><img src="img/blog-card-3.3.jpg" alt="" class="gallery-slide-img"></div>
@@ -233,7 +250,7 @@
 <div class="preference block-divider ov-hidden">
 	<div class="container">
 
-		<div class="preference__header grid block-divider">
+		<div class="preference__header grid grid-box-title block-divider">
 			<div class="grid-item grid-item--title">
 				<h2 class="block-title">
 					<span class="block-title__icon">
@@ -255,7 +272,7 @@
 			</div>
 		</div>
 
-		<div class="preference__box-1 grid">
+		<div class="preference__box-1 preference__content grid">
 			<div class="icon-near-text grid-item">
 				<div class="icon-near-text__icon">
 					<svg class="icon icon-abstract-1"><use xlink:href="#icon-abstract-1"></use></svg>
@@ -286,7 +303,7 @@
 		</div>
 
 
-		<div class="preference__box-2 grid block-divider">
+		<div class="preference__box-2 grid grid-box-title block-divider">
 			<div class="grid-item grid-item--title">
 				<h2 class="block-title">
 					<span class="block-title__icon">
@@ -305,17 +322,17 @@
 		</div>
 
 		<div class="preference__box-wrap-1 relative block-divider">
+			<div class="preference__box-3 block-divider">
+				<h2 class="block-title">Vigtige branchetrends 2022</h2>
+				<p class="text-mutted">Søgetrafik (betalt og organisk) er kilden til 49 % af de besøgende på webstedet til top 10 i branchen. Vi analyserede data på de 10 bedste websteder i SimilarWeb og fandt ud af, at andelen af betalt trafik når 34 %.</p>
+			</div>
+
 			<div class="animation-graph-container">
 				<svg viewBox="-2 -2 40 60">
 					<path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
 					<path class="graph-circle" stroke-dasharray="49, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
 				</svg>
 				<span class="graph-text">49<i>%</i></span>
-			</div>
-
-			<div class="preference__box-3 block-divider">
-				<h2 class="block-title">Vigtige branchetrends 2022</h2>
-				<p class="text-mutted">Søgetrafik (betalt og organisk) er kilden til 49 % af de besøgende på webstedet til top 10 i branchen. Vi analyserede data på de 10 bedste websteder i SimilarWeb og fandt ud af, at andelen af betalt trafik når 34 %.</p>
 			</div>
 
 			<div class="preference__box-4 quotation quotation--ghost block-divider">
@@ -698,7 +715,7 @@
 
 
 
-<div class="navigation js-navigation">
+<div class="navigation js-navigation nav-padding">
 	<div class="container">
 		<ul class="navigation__base-nav menu">
 			<li class="menu__li menu__li--label"><h4 class="menu__label dot-label dot-label--18">Menu</h4></li>
@@ -727,10 +744,11 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
-
-		<!-- <svg class="detail detail-1 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg> -->
-		<!-- <svg class="detail detail-2 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg> -->
+	<div class="detail-holder">
+		<svg class="detail detail-1 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg>
+		<svg class="detail detail-2 rotate" style="--s: 20s"><use xlink:href="#icon-abs-detail"></use></svg>
 	</div>
 </div>
 

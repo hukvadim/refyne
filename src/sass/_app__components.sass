@@ -169,9 +169,9 @@
 		z-index: 9
 		mix-blend-mode: difference
 		+xxl
-			--fz: 5.3125rem
+			font-size: 5.3125rem
 		+lg
-			--fz: 4.3125rem
+			font-size: 4.3125rem
 		+md
 			font-size: 3.1rem
 			margin-top: 1.25rem
@@ -203,7 +203,6 @@
 			width: 25rem
 		+xl
 			width: 23.75rem
-			// --r: 0
 		+lg
 			position: relative
 			width: 260px
@@ -236,34 +235,103 @@ $bem: '.header'
 		--fz: 6.875rem
 		font-size: var(--fz)
 		margin-left: -0.375rem
+		+xxl
+			font-size: 5.3125rem
+		+lg
+			font-size: 4.3125rem
+		+md
+			font-size: 3.1rem
+			line-height: 1.35
+		+sm
+			font-size: 2.8125rem
 	&-slide
 		& &__btn
 			margin-top: 1.5625rem
 	&--big-text
+		+xl
+			min-height: initial
+			padding-bottom: 12.25rem
 		#{$bem}__meta
 			--typo-elm-mb: 0
 			--typo-elm-pt: 3.625rem
 			font-size: 1.25rem
+			+sm
+				padding-top: 4.6875rem
 		#{$bem}__title
 			--typo-elm-mt: 0
 			--typo-elm-mb: 1.875rem
-			font-size: 6.875rem
 			font-weight: 400
 		#{$bem}__text-wrap
 			margin-bottom: 0
+			+xl
+				flex-direction: column
 			.grid-item
 				max-width: 32.5rem
 				&--title
+					+xl
+						max-width: 100%
 				&--text
 					padding-bottom: 3.125rem
+					+xl
+						align-self: flex-start
+						margin-top: 30px
 		.detail-hero
 			position: absolute
 			top: 1rem
 			right: -3.5rem
+			z-index: 9
+			+xxl
+				top: 1rem
+				right: 4%
+			+xl
+				top: 0
+				right: 3.125rem
+				width: 5rem
+				height: 5rem
 		.detail-1
 			--sz: 40.625rem
 			--t: -36.25rem
 			--r: 10rem
+			+xl
+				top: -18.875rem
+				right: -8.75rem
+				width: 22.0625rem
+				height: 22.0625rem
+	&--big-word
+		+lg
+			padding-bottom: 16.875rem
+			min-height: initial
+		#{$bem}__hold
+		#{$bem}__meta
+		#{$bem}__title
+			--fz: 25rem
+			--typo-elm-mt: -12.625rem
+			--typo-elm-mb: 8.4375rem
+			font-style: italic
+			line-height: 1
+			margin-left: 7.375rem
+			+xxl-1600
+				margin-top: -8.625rem
+			+xxl
+				margin-top: -5.625rem
+				margin-left: 0
+			+xl
+				font-size: 20rem
+			+lg
+				font-size: 14.875rem
+				margin-top: -3.625rem
+				margin-bottom: 4.375rem
+			+md
+				font-size: 10.625rem
+				margin-top: -1.875rem
+			+sm
+				font-size: 6.625rem
+				margin-top: -0.3125rem
+		#{$bem}__btn
+		.detail-1
+			--t: 15.625rem
+			--r: -37.625rem
+			--sz: 29.375rem
 	&--avatar
 		#{$bem}__hold
 			.header-slide
@@ -305,41 +373,6 @@ $bem: '.header'
 
 		.user-img-text
 			--m: 3.875rem 0 0
-	&--big-word
-		+lg
-			padding-bottom: 16.875rem
-			min-height: initial
-		#{$bem}__hold
-		#{$bem}__meta
-		#{$bem}__title
-			--fz: 25rem
-			--typo-elm-mt: -12.625rem
-			--typo-elm-mb: 8.4375rem
-			font-style: italic
-			line-height: 1
-			margin-left: 7.375rem
-			+xxl-1600
-				margin-top: -8.625rem
-			+xxl
-				margin-top: -5.625rem
-				margin-left: 0
-			+xl
-				font-size: 20rem
-			+lg
-				font-size: 14.875rem
-				margin-top: -3.625rem
-				margin-bottom: 4.375rem
-			+md
-				font-size: 10.625rem
-				margin-top: -1.875rem
-			+sm
-				font-size: 6.625rem
-				margin-top: -0.3125rem
-		#{$bem}__btn
-		.detail-1
-			--t: 15.625rem
-			--r: -40.625rem
-			--sz: 29.375rem
 	&--404
 		#{$bem}__meta
 		#{$bem}__title
@@ -505,10 +538,6 @@ $bem: '.quotation'
 	+xxl
 		--quote-box-ml: 6.25rem
 		min-height: auto
-	// +xl
-	// 	padding-bottom: 8.4375rem
-	// +lg
-	// 	padding-bottom: 5.625rem
 	.container
 		padding-top: 15rem
 		padding-bottom: 15rem
@@ -588,7 +617,13 @@ $bem: '.quotation'
 		--quote-fz-text: 1.5rem
 		--quote-box-ml: 0
 		--quote-m: 1.75rem 0 1.5rem 7rem
+		#{$bem}__box
+			margin-left: 0
+			+lg
+				padding-top: 2.9125rem
 		#{$bem}__quote
+			+md
+				margin-left: 3rem
 			&-text
 				max-width: 60rem
 				line-height: 1.5
@@ -697,7 +732,7 @@ $bem: '.quotation'
 		max-width:  460px
 		padding: 4rem 4rem 2.75rem
 	+md
-		padding: 3rem 3rem 1.75rem
+		padding: 3rem 2rem 1.75rem
 	+sm
 		margin-left: 30px
 		margin-right: 60px
@@ -795,13 +830,24 @@ $bem: '.quotation'
 
 
 .gallery-images
+	.slick-list
+		+lg
+			overflow: initial
 	& &-wrapper
 
 	.gallery-slide-hold
 		width: 100%
 		padding: 0 0.9375rem
+		+sm
+			padding: 0 0.5rem
 	.gallery-slide-img
 		width: 100%
+	&-under-header
+		--m: -14.75rem 0 0
+		+xl
+			margin-top: -8.75rem
+		+sm
+			margin-top: -7.75rem
 
 
 .gallery-masonry
@@ -907,7 +953,7 @@ $bem: '.quotation'
 				bottom: -190px
 
 
-
+0.35px
 
 $bem: '.icon-near-text'
 .icon-near-text
@@ -918,6 +964,8 @@ $bem: '.icon-near-text'
 	&__icon
 		--m: 0 2.375rem 0 0
 		margin: var(--m)
+		+sm
+			margin: 0 1.375rem 0 0
 		.icon
 			--s: 3.125rem
 			width: var(--s)
@@ -989,21 +1037,62 @@ $bem: '.preference'
 		--p: 0 0 10.625rem
 		.animation-graph-container
 			top: 8.625rem
-			right: -49.125rem
+			right: -60%
+			+xxl-1600
+				right: -48%
+			+md
+				position: relative
+				top: -24rem
+				left: 0%
+				margin-left: 14%
+			+sm
+				margin-left: 0
+			svg
+				+md
+					width: 22.5rem
+					height: 34.25rem
+					position: absolute
+					top: 0
+					left: 0
+				+sm
+					width: 20.5rem
+					height: 30.25rem
+					top: 0.625rem
+					left: -0.875rem
 			.graph-text
 				top: 21.1875rem
 				left: 35rem
 				font-size: 12.5rem
 				font-weight: 400
 				font-style: italic
+				+md
+					position: absolute
+					top: 120px
+					left: 135px
+					font-size: 4.75rem
+				+sm
+					top: 6.75rem
+					left: 6.75rem
 				i
 					font-size: 3.75rem
 					font-weight: 300
 					top: 4.375rem
 					right: -4.25rem
+					+md
+						font-size: 1.375rem
+						font-weight: 300
+						left: initial
+						top: 2rem
+						right: -2rem
 	& &__box-1
 	& &__box-2
 		--p: 18.125rem 0 0
+		+xl
+			padding: 14.125rem 0 0
+		+lg
+			padding: 10.125rem 0 0
+		+sm
+			padding: 6.125rem 0 0
 		.grid-item
 			&--title
 				--fz-as: flex-start
@@ -1016,11 +1105,19 @@ $bem: '.preference'
 			&--text
 				--fz-as: center
 				--card-max: 33.875rem
+				+lg
+					--fz-as: flex-start
 	& &__box-3
 		--p: 19.5rem 0 7.5rem 7rem
+		+lg
+			padding: 9.5rem 0 25rem 0
+		+sm
+			padding-top: 4.5rem
 		.block-title
 			--fz: 3.5rem
 			--typo-elm-mb: 2.5rem
+			+md
+				font-size: 2.5rem
 		.text-mutted
 			--max-w: 31.875rem
 	&--icons-and-text
@@ -1052,10 +1149,16 @@ $bem: '.preference'
 .other-jobs
 	& &__header
 		padding-bottom: 8.875rem
+		+lg
+			padding-bottom: 2.875rem
 	.block-title
 	.blog-list__hold.grid
+		+lg
+			flex-direction: column
 		.grid-item
 			margin-top: -11.5625rem
+			+lg
+				margin-top: 0 !important
 			&:first-child
 				margin-top: 0
 			&:nth-child(even)
@@ -1068,16 +1171,31 @@ $bem: '.preference'
 $bem: '.interesting-text'
 .interesting-text
 	--p: 0 0 18.75rem
+	+xl
+		padding-bottom: 8.75rem
+	+md
+		padding-bottom: 0
 	& &__header
 		--p: 0 0 2.8125rem
 	& &__box
 		--p: 8.625rem 0 0
+		+lg
+			flex-direction: column
+			padding-top: 0
 		&:first-child
 			--p: 0 0 0
 		&-hold
 		.hero-element-hold
 			--b: -4rem
 			--l: -4.375rem
+			.icon-hero-element
+				+lg
+					width: 5rem
+					height: 5rem
+					bottom: 0
+					left: initial
+					right: 10%
+					bottom: -35px
 		.text-mutted
 			--fz: 1.125rem
 			--lh: 1.52
@@ -1085,20 +1203,46 @@ $bem: '.interesting-text'
 		.grid-item
 			position: relative
 			&--img-hold
-				right: 12.375rem
+				right: 11%
+				display: flex
+				justify-content: flex-end
+				+xxl
+					right: 8%
+				+xl
+					right: 3%
+				+lg
+					order: 2
+					right: 0
+					justify-content: flex-start
+					margin-top: 20px
+				.img
+					width: 116%
+					+lg
+						width: 100%
 			&--content
 				--fz-as: center
 				max-width: 35rem
+				+lg
+					order: 1
+					max-width: 100%
 				~ .grid-item--img-hold
-					right: -13rem
+					right: -19%
+					+xxl
+						right: -14%
+					+xxl
+						right: -5%
+					+lg
+						right: 0
 		.box-1
 		.box-2
 	.detail
+		+lg
+			display: none
 		&-1
 			--t: 33.5rem
 		&-2
 			--b: 12.375rem
-			--l: -31.625rem
+			// --l: -31.625rem
 
 
 
@@ -1177,9 +1321,7 @@ $bem: '.interesting-text'
 $bem: '.team-user'
 .team-user
 	position: relative
-	padding: 2.5rem 95px 6.5rem
-	min-height: 47.5rem
-	max-width: 43.75rem
+	margin: 2.5rem 0 0
 	&:hover
 		#{$bem}__img
 			transform: rotate(1.8deg)
@@ -1189,6 +1331,11 @@ $bem: '.team-user'
 		width: 100%
 		transition: transform 0.5s
 		&-hold
+			padding: 0 6.5625rem 6.5625rem 0
+			+md
+				padding: 0 3.5625rem 6.5625rem 0
+			+sm
+				padding: 0 2rem 2.5625rem 0
 	&__data-hold
 		background-color: var(--bl)
 		padding: 2.625rem 2.5rem
@@ -1199,6 +1346,13 @@ $bem: '.team-user'
 		right: 0
 		opacity: 0
 		transition: transform 0.4s, opacity .25s ease-in-out
+		+sm
+			padding: 30px
+			margin-left: 1.875rem
+			margin-right: -1.875rem
+			margin-top: -8.75rem
+			position: relative
+			opacity: 1
 	&__name
 		--typo-elm-mt: 0
 		--typo-elm-mb: 15px
@@ -1210,9 +1364,13 @@ $bem: '.team-user'
 		font-weight: 400
 		color: var(--gray-light2)
 		text-transform: uppercase
-
+		+sm
+			font-size: 0.75rem
+			color: var(--wh)
 	&__social
 		margin: -0.5625rem 0 0.625rem -0.9375rem
+		+sm
+			margin-left: -14px
 		&-link
 			color: var(--wh)
 			display: inline-flex
@@ -1221,6 +1379,10 @@ $bem: '.team-user'
 			width: 2.8125rem
 			height: 2.8125rem
 			margin: 0.3125rem
+			+sm
+				width: 2.5rem
+				height: 2.5rem
+				color: var(--gray)
 			.icon
 				--sz: 1.25rem
 	&__desc
@@ -1228,24 +1390,40 @@ $bem: '.team-user'
 		font-size: 1rem
 		font-weight: 400
 		color: var(--gray-light2)
+		+sm
+			font-size: 0.875rem
+			color: var(--gray)
 
 
 .our-team
 	overflow: hidden
 	& &__header
 		--p: 0 0 4.625rem
+		+lg
+			padding: 0
+		+md
+			padding-bottom: 30px
 	& &__slider
-		margin-left: -5.625rem
-		padding-bottom: 2.625rem
 		position: relative
+		max-width: 43.75rem
+		+xxl
+			max-width: 40.625rem
+		.gallery-item
+			margin-right: 5.3125rem
+			+md
+				margin-right: 1.25rem
+			+sm
+				margin-right: 0.625rem
 		.slick-prev
 			display: none !important
 		.gallery-item-btn
 			position: absolute
-			top: 30%
-			right: 10%
+			top: 31%
+			right: -90%
 			+xxl
 				right: 12%
+			+md
+				display: none !important
 		.slick-list
 			overflow: initial
 
@@ -1253,13 +1431,16 @@ $bem: '.team-user'
 
 .contacts-inline
 	& &__label
-		--typo-elm-mb: 2.75rem
+		--typo-elm-mb: 2.125rem
 	& &__hold
 		margin: 0 -1.125rem
 	& &__value
 		--pr: var(--wh)
 		font-size: 1.125rem
 		padding: 0 1.125rem
+		margin-top: 0.625rem
+		margin-bottom: 0.625rem
+		display: inline-block
 
 
 .menu
@@ -1279,3 +1460,5 @@ $bem: '.team-user'
 		font-weight: 600
 		display: block
 		padding: 0.9375rem 0
+		+lg
+			font-size: 2.5rem

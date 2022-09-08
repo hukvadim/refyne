@@ -27,6 +27,8 @@
 	--nav-padding: 11.25rem
 	+lg
 		--img-hero-sz: 5rem
+	+md
+		--nav-padding: 7.375rem
 
 *, ::before, ::after
 	box-sizing: border-box
@@ -38,6 +40,8 @@ body
 	color: var(--bl)
 	font-weight: 400
 	background-color: var(--base-bg)
+	&.toggle-nav-show
+		overflow: hidden
 
 $bem: '.logo'
 .logo
@@ -55,6 +59,8 @@ $bem: '.logo'
 		left: 4.5rem
 		position: absolute
 	&--wh
+		position: relative
+		display: inline-block
 		#{$bem}__part
 			color: var(--wh)
 
@@ -405,8 +411,13 @@ $fwList: 300 400 500 600 700
 		&--text-max
 			--fz-as: center
 			max-width: 31.875rem
+			+lg
+				align-self: flex-start
+				max-width: 31.875rem
 		&--offset-r-100
 			right: -6.25rem
+			+xxl
+				right: -2.25rem
 		.text-mutted
 			font-size: 1rem
 	&--3-col
@@ -418,6 +429,7 @@ $fwList: 300 400 500 600 700
 		+lg
 			flex-direction: column
 		.grid-item
+			--card-width: initial
 			&--title
 			&--text
 

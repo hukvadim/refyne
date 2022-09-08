@@ -5,12 +5,22 @@ $bem: '.services'
 	
 	.gallery
 		--p: 15.625rem 0 0
+		+md
+			padding: 8.625rem 0 0
 	
 	& > .blog-list
 		--p: 14.125rem 0 19.125rem
+		+sm
+			padding: 6.125rem 0 10.125rem
 	
 	.services-content
 		--p: 11.125rem 0 22.1875rem
+		+xl
+			padding: 11.125rem 0 12.1875rem
+		+md
+			padding: 11.125rem 0 8.1875rem
+		+sm
+			padding: 9.125rem 0 5.1875rem
 
 		&__title
 			--typo-elm-mb: 7.375rem
@@ -18,6 +28,23 @@ $bem: '.services'
 		#{$bem}__box
 			--p: 14.6875rem 0 2.125rem
 			--fz-as: center
+			+lg
+				--p: 7.6875rem 0 2.125rem
+				padding: 7.6875rem 0 2.125rem
+			+sm
+				padding: 2.6875rem 0 2.125rem
+			.block-title,
+			.block-title__text
+				+md
+					font-size: 2.8125rem
+			.gallery-item-btn
+				+md
+					display: none !important
+			.blog-card
+				+lg
+					padding-top: 3.25rem
+				+sm
+					padding-top: 1.875rem
 			.grid-item
 				&--title
 					.block-title
@@ -30,6 +57,9 @@ $bem: '.services'
 				&--text
 					--fz-as: center
 					--card-max: 33.875rem
+					+lg
+						align-items: flex-start
+						max-width: 100%
 			&-text
 				--p: 0 0 2.1875rem
 			&-gallery
@@ -44,3 +74,5 @@ $bem: '.services'
 			&--title
 				.text-mutted
 					max-width: 38.75rem
+					+lg
+						max-width: 100%
